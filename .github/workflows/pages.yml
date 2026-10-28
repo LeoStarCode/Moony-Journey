@@ -1,0 +1,58 @@
+name: Publish GitHub Pages
+
+# Publishing is an explicit action; pushes only run validation.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    uses: ./.github/workflows/validate.yml
+
+  package:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Check out game
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6.0.0
+      - name: Package static game
+        run: |
+          mkdir _site
+          cp index.html style.css script.js questions.json .nojekyll _site/
+          cp -R assets _site/assets
+      - name: Upload game artifact
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: _site
+          include-hidden-files: true
+
+  deploy:
+    needs: package
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish game
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1

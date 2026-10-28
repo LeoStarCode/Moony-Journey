@@ -1,0 +1,3844 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is 10 + 10?",
+      "answers": [
+        "19",
+        "17",
+        "18",
+        "20"
+      ],
+      "correctAnswer": 3,
+      "explanation": "10 plus 10 makes 20."
+    },
+    {
+      "id": 2,
+      "question": "What is 6 + 8?",
+      "answers": [
+        "18",
+        "14",
+        "11",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "6 plus 8 makes 14."
+    },
+    {
+      "id": 3,
+      "question": "What is 1 + 10?",
+      "answers": [
+        "11",
+        "14",
+        "15",
+        "9"
+      ],
+      "correctAnswer": 0,
+      "explanation": "1 plus 10 makes 11."
+    },
+    {
+      "id": 4,
+      "question": "What is 14 + 5?",
+      "answers": [
+        "19",
+        "20",
+        "17",
+        "18"
+      ],
+      "correctAnswer": 0,
+      "explanation": "14 plus 5 makes 19."
+    },
+    {
+      "id": 5,
+      "question": "What is 13 + 6?",
+      "answers": [
+        "20",
+        "17",
+        "18",
+        "19"
+      ],
+      "correctAnswer": 3,
+      "explanation": "13 plus 6 makes 19."
+    },
+    {
+      "id": 6,
+      "question": "What is 2 + 4?",
+      "answers": [
+        "5",
+        "8",
+        "6",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "2 plus 4 makes 6."
+    },
+    {
+      "id": 7,
+      "question": "What is 9 + 4?",
+      "answers": [
+        "14",
+        "9",
+        "13",
+        "12"
+      ],
+      "correctAnswer": 2,
+      "explanation": "9 plus 4 makes 13."
+    },
+    {
+      "id": 8,
+      "question": "What is 4 + 2?",
+      "answers": [
+        "9",
+        "3",
+        "6",
+        "5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "4 plus 2 makes 6."
+    },
+    {
+      "id": 9,
+      "question": "What is 4 + 6?",
+      "answers": [
+        "7",
+        "14",
+        "12",
+        "10"
+      ],
+      "correctAnswer": 3,
+      "explanation": "4 plus 6 makes 10."
+    },
+    {
+      "id": 10,
+      "question": "What is 13 + 5?",
+      "answers": [
+        "18",
+        "15",
+        "19",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "13 plus 5 makes 18."
+    },
+    {
+      "id": 11,
+      "question": "What is 7 + 3?",
+      "answers": [
+        "12",
+        "9",
+        "11",
+        "10"
+      ],
+      "correctAnswer": 3,
+      "explanation": "7 plus 3 makes 10."
+    },
+    {
+      "id": 12,
+      "question": "What is 13 + 4?",
+      "answers": [
+        "17",
+        "13",
+        "18",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "13 plus 4 makes 17."
+    },
+    {
+      "id": 13,
+      "question": "What is 3 + 4?",
+      "answers": [
+        "6",
+        "4",
+        "9",
+        "7"
+      ],
+      "correctAnswer": 3,
+      "explanation": "3 plus 4 makes 7."
+    },
+    {
+      "id": 14,
+      "question": "What is 5 + 9?",
+      "answers": [
+        "13",
+        "14",
+        "15",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "5 plus 9 makes 14."
+    },
+    {
+      "id": 15,
+      "question": "What is 15 + 2?",
+      "answers": [
+        "16",
+        "13",
+        "17",
+        "14"
+      ],
+      "correctAnswer": 2,
+      "explanation": "15 plus 2 makes 17."
+    },
+    {
+      "id": 16,
+      "question": "What is 2 + 6?",
+      "answers": [
+        "6",
+        "8",
+        "7",
+        "9"
+      ],
+      "correctAnswer": 1,
+      "explanation": "2 plus 6 makes 8."
+    },
+    {
+      "id": 17,
+      "question": "What is 2 + 3?",
+      "answers": [
+        "5",
+        "1",
+        "6",
+        "8"
+      ],
+      "correctAnswer": 0,
+      "explanation": "2 plus 3 makes 5."
+    },
+    {
+      "id": 18,
+      "question": "What is 3 + 2?",
+      "answers": [
+        "9",
+        "3",
+        "1",
+        "5"
+      ],
+      "correctAnswer": 3,
+      "explanation": "3 plus 2 makes 5."
+    },
+    {
+      "id": 19,
+      "question": "What is 10 + 8?",
+      "answers": [
+        "14",
+        "18",
+        "17",
+        "19"
+      ],
+      "correctAnswer": 1,
+      "explanation": "10 plus 8 makes 18."
+    },
+    {
+      "id": 20,
+      "question": "What is 4 + 3?",
+      "answers": [
+        "5",
+        "10",
+        "4",
+        "7"
+      ],
+      "correctAnswer": 3,
+      "explanation": "4 plus 3 makes 7."
+    },
+    {
+      "id": 21,
+      "question": "What is 13 + 3?",
+      "answers": [
+        "15",
+        "18",
+        "19",
+        "16"
+      ],
+      "correctAnswer": 3,
+      "explanation": "13 plus 3 makes 16."
+    },
+    {
+      "id": 22,
+      "question": "What is 2 + 2?",
+      "answers": [
+        "1",
+        "4",
+        "6",
+        "0"
+      ],
+      "correctAnswer": 1,
+      "explanation": "2 plus 2 makes 4."
+    },
+    {
+      "id": 23,
+      "question": "What is 6 + 7?",
+      "answers": [
+        "9",
+        "11",
+        "13",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "6 plus 7 makes 13."
+    },
+    {
+      "id": 24,
+      "question": "What is 7 + 6?",
+      "answers": [
+        "17",
+        "16",
+        "13",
+        "12"
+      ],
+      "correctAnswer": 2,
+      "explanation": "7 plus 6 makes 13."
+    },
+    {
+      "id": 25,
+      "question": "What is 5 + 5?",
+      "answers": [
+        "10",
+        "9",
+        "14",
+        "11"
+      ],
+      "correctAnswer": 0,
+      "explanation": "5 plus 5 makes 10."
+    },
+    {
+      "id": 26,
+      "question": "What is 10 + 4?",
+      "answers": [
+        "17",
+        "14",
+        "13",
+        "18"
+      ],
+      "correctAnswer": 1,
+      "explanation": "10 plus 4 makes 14."
+    },
+    {
+      "id": 27,
+      "question": "What is 7 + 5?",
+      "answers": [
+        "13",
+        "15",
+        "10",
+        "12"
+      ],
+      "correctAnswer": 3,
+      "explanation": "7 plus 5 makes 12."
+    },
+    {
+      "id": 28,
+      "question": "What is 8 + 2?",
+      "answers": [
+        "12",
+        "13",
+        "11",
+        "10"
+      ],
+      "correctAnswer": 3,
+      "explanation": "8 plus 2 makes 10."
+    },
+    {
+      "id": 29,
+      "question": "What is 15 + 4?",
+      "answers": [
+        "15",
+        "16",
+        "18",
+        "19"
+      ],
+      "correctAnswer": 3,
+      "explanation": "15 plus 4 makes 19."
+    },
+    {
+      "id": 30,
+      "question": "What is 9 + 5?",
+      "answers": [
+        "13",
+        "12",
+        "14",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "9 plus 5 makes 14."
+    },
+    {
+      "id": 31,
+      "question": "What is 14 + 2?",
+      "answers": [
+        "18",
+        "16",
+        "13",
+        "14"
+      ],
+      "correctAnswer": 1,
+      "explanation": "14 plus 2 makes 16."
+    },
+    {
+      "id": 32,
+      "question": "What is 6 + 4?",
+      "answers": [
+        "10",
+        "12",
+        "6",
+        "8"
+      ],
+      "correctAnswer": 0,
+      "explanation": "6 plus 4 makes 10."
+    },
+    {
+      "id": 33,
+      "question": "What is 6 + 2?",
+      "answers": [
+        "5",
+        "12",
+        "4",
+        "8"
+      ],
+      "correctAnswer": 3,
+      "explanation": "6 plus 2 makes 8."
+    },
+    {
+      "id": 34,
+      "question": "What is 3 + 1?",
+      "answers": [
+        "8",
+        "7",
+        "4",
+        "1"
+      ],
+      "correctAnswer": 2,
+      "explanation": "3 plus 1 makes 4."
+    },
+    {
+      "id": 35,
+      "question": "What is 4 + 4?",
+      "answers": [
+        "8",
+        "7",
+        "11",
+        "5"
+      ],
+      "correctAnswer": 0,
+      "explanation": "4 plus 4 makes 8."
+    },
+    {
+      "id": 36,
+      "question": "What is 9 + 6?",
+      "answers": [
+        "15",
+        "19",
+        "11",
+        "18"
+      ],
+      "correctAnswer": 0,
+      "explanation": "9 plus 6 makes 15."
+    },
+    {
+      "id": 37,
+      "question": "What is 1 + 1?",
+      "answers": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctAnswer": 2,
+      "explanation": "1 plus 1 makes 2."
+    },
+    {
+      "id": 38,
+      "question": "What is 8 + 6?",
+      "answers": [
+        "12",
+        "17",
+        "14",
+        "11"
+      ],
+      "correctAnswer": 2,
+      "explanation": "8 plus 6 makes 14."
+    },
+    {
+      "id": 39,
+      "question": "What is 5 + 1?",
+      "answers": [
+        "9",
+        "5",
+        "2",
+        "6"
+      ],
+      "correctAnswer": 3,
+      "explanation": "5 plus 1 makes 6."
+    },
+    {
+      "id": 40,
+      "question": "What is 8 + 7?",
+      "answers": [
+        "12",
+        "15",
+        "16",
+        "17"
+      ],
+      "correctAnswer": 1,
+      "explanation": "8 plus 7 makes 15."
+    },
+    {
+      "id": 41,
+      "question": "What is 1 + 6?",
+      "answers": [
+        "7",
+        "3",
+        "6",
+        "5"
+      ],
+      "correctAnswer": 0,
+      "explanation": "1 plus 6 makes 7."
+    },
+    {
+      "id": 42,
+      "question": "What is 7 + 7?",
+      "answers": [
+        "13",
+        "12",
+        "14",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "7 plus 7 makes 14."
+    },
+    {
+      "id": 43,
+      "question": "What is 15 + 5?",
+      "answers": [
+        "16",
+        "17",
+        "20",
+        "18"
+      ],
+      "correctAnswer": 2,
+      "explanation": "15 plus 5 makes 20."
+    },
+    {
+      "id": 44,
+      "question": "What is 9 + 10?",
+      "answers": [
+        "17",
+        "16",
+        "15",
+        "19"
+      ],
+      "correctAnswer": 3,
+      "explanation": "9 plus 10 makes 19."
+    },
+    {
+      "id": 45,
+      "question": "What is 11 + 6?",
+      "answers": [
+        "17",
+        "20",
+        "13",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "11 plus 6 makes 17."
+    },
+    {
+      "id": 46,
+      "question": "What is 4 + 8?",
+      "answers": [
+        "13",
+        "15",
+        "11",
+        "12"
+      ],
+      "correctAnswer": 3,
+      "explanation": "4 plus 8 makes 12."
+    },
+    {
+      "id": 47,
+      "question": "What is 15 + 1?",
+      "answers": [
+        "13",
+        "17",
+        "19",
+        "16"
+      ],
+      "correctAnswer": 3,
+      "explanation": "15 plus 1 makes 16."
+    },
+    {
+      "id": 48,
+      "question": "What is 7 + 10?",
+      "answers": [
+        "16",
+        "15",
+        "17",
+        "18"
+      ],
+      "correctAnswer": 2,
+      "explanation": "7 plus 10 makes 17."
+    },
+    {
+      "id": 49,
+      "question": "What is 14 + 6?",
+      "answers": [
+        "17",
+        "20",
+        "18",
+        "19"
+      ],
+      "correctAnswer": 1,
+      "explanation": "14 plus 6 makes 20."
+    },
+    {
+      "id": 50,
+      "question": "What is 12 + 4?",
+      "answers": [
+        "18",
+        "15",
+        "19",
+        "16"
+      ],
+      "correctAnswer": 3,
+      "explanation": "12 plus 4 makes 16."
+    },
+    {
+      "id": 51,
+      "question": "What is 12 + 6?",
+      "answers": [
+        "19",
+        "16",
+        "18",
+        "14"
+      ],
+      "correctAnswer": 2,
+      "explanation": "12 plus 6 makes 18."
+    },
+    {
+      "id": 52,
+      "question": "What is 4 + 9?",
+      "answers": [
+        "11",
+        "10",
+        "15",
+        "13"
+      ],
+      "correctAnswer": 3,
+      "explanation": "4 plus 9 makes 13."
+    },
+    {
+      "id": 53,
+      "question": "What is 14 + 4?",
+      "answers": [
+        "16",
+        "18",
+        "15",
+        "17"
+      ],
+      "correctAnswer": 1,
+      "explanation": "14 plus 4 makes 18."
+    },
+    {
+      "id": 54,
+      "question": "What is 10 + 6?",
+      "answers": [
+        "20",
+        "16",
+        "15",
+        "18"
+      ],
+      "correctAnswer": 1,
+      "explanation": "10 plus 6 makes 16."
+    },
+    {
+      "id": 55,
+      "question": "What is 5 + 7?",
+      "answers": [
+        "13",
+        "8",
+        "12",
+        "11"
+      ],
+      "correctAnswer": 2,
+      "explanation": "5 plus 7 makes 12."
+    },
+    {
+      "id": 56,
+      "question": "What is 2 + 8?",
+      "answers": [
+        "8",
+        "12",
+        "13",
+        "10"
+      ],
+      "correctAnswer": 3,
+      "explanation": "2 plus 8 makes 10."
+    },
+    {
+      "id": 57,
+      "question": "What is 1 + 4?",
+      "answers": [
+        "7",
+        "6",
+        "5",
+        "1"
+      ],
+      "correctAnswer": 2,
+      "explanation": "1 plus 4 makes 5."
+    },
+    {
+      "id": 58,
+      "question": "What is 2 + 1?",
+      "answers": [
+        "5",
+        "7",
+        "4",
+        "3"
+      ],
+      "correctAnswer": 3,
+      "explanation": "2 plus 1 makes 3."
+    },
+    {
+      "id": 59,
+      "question": "What is 9 + 1?",
+      "answers": [
+        "10",
+        "7",
+        "8",
+        "12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "9 plus 1 makes 10."
+    },
+    {
+      "id": 60,
+      "question": "What is 10 + 3?",
+      "answers": [
+        "10",
+        "17",
+        "13",
+        "14"
+      ],
+      "correctAnswer": 2,
+      "explanation": "10 plus 3 makes 13."
+    },
+    {
+      "id": 61,
+      "question": "What is 9 + 2?",
+      "answers": [
+        "13",
+        "9",
+        "8",
+        "11"
+      ],
+      "correctAnswer": 3,
+      "explanation": "9 plus 2 makes 11."
+    },
+    {
+      "id": 62,
+      "question": "What is 11 + 7?",
+      "answers": [
+        "18",
+        "15",
+        "14",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "11 plus 7 makes 18."
+    },
+    {
+      "id": 63,
+      "question": "What is 1 + 5?",
+      "answers": [
+        "5",
+        "4",
+        "3",
+        "6"
+      ],
+      "correctAnswer": 3,
+      "explanation": "1 plus 5 makes 6."
+    },
+    {
+      "id": 64,
+      "question": "What is 8 + 4?",
+      "answers": [
+        "8",
+        "15",
+        "12",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "8 plus 4 makes 12."
+    },
+    {
+      "id": 65,
+      "question": "What is 1 + 2?",
+      "answers": [
+        "6",
+        "4",
+        "3",
+        "7"
+      ],
+      "correctAnswer": 2,
+      "explanation": "1 plus 2 makes 3."
+    },
+    {
+      "id": 66,
+      "question": "What is 9 + 7?",
+      "answers": [
+        "16",
+        "17",
+        "19",
+        "12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "9 plus 7 makes 16."
+    },
+    {
+      "id": 67,
+      "question": "What is 7 + 9?",
+      "answers": [
+        "16",
+        "18",
+        "15",
+        "20"
+      ],
+      "correctAnswer": 0,
+      "explanation": "7 plus 9 makes 16."
+    },
+    {
+      "id": 68,
+      "question": "What is 2 + 5?",
+      "answers": [
+        "8",
+        "7",
+        "6",
+        "10"
+      ],
+      "correctAnswer": 1,
+      "explanation": "2 plus 5 makes 7."
+    },
+    {
+      "id": 69,
+      "question": "What is 11 + 2?",
+      "answers": [
+        "13",
+        "17",
+        "9",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "11 plus 2 makes 13."
+    },
+    {
+      "id": 70,
+      "question": "What is 12 + 8?",
+      "answers": [
+        "16",
+        "20",
+        "17",
+        "19"
+      ],
+      "correctAnswer": 1,
+      "explanation": "12 plus 8 makes 20."
+    },
+    {
+      "id": 71,
+      "question": "What is 4 - 3?",
+      "answers": [
+        "0",
+        "1",
+        "4",
+        "2"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 3 away from 4 to get 1."
+    },
+    {
+      "id": 72,
+      "question": "What is 7 - 2?",
+      "answers": [
+        "5",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 2 away from 7 to get 5."
+    },
+    {
+      "id": 73,
+      "question": "What is 13 - 11?",
+      "answers": [
+        "0",
+        "6",
+        "2",
+        "1"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 11 away from 13 to get 2."
+    },
+    {
+      "id": 74,
+      "question": "What is 17 - 11?",
+      "answers": [
+        "8",
+        "6",
+        "7",
+        "2"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 11 away from 17 to get 6."
+    },
+    {
+      "id": 75,
+      "question": "What is 15 - 2?",
+      "answers": [
+        "15",
+        "13",
+        "9",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 2 away from 15 to get 13."
+    },
+    {
+      "id": 76,
+      "question": "What is 11 - 11?",
+      "answers": [
+        "1",
+        "3",
+        "2",
+        "0"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 11 away from 11 to get 0."
+    },
+    {
+      "id": 77,
+      "question": "What is 20 - 1?",
+      "answers": [
+        "16",
+        "18",
+        "19",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 1 away from 20 to get 19."
+    },
+    {
+      "id": 78,
+      "question": "What is 20 - 19?",
+      "answers": [
+        "4",
+        "1",
+        "2",
+        "0"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 19 away from 20 to get 1."
+    },
+    {
+      "id": 79,
+      "question": "What is 14 - 8?",
+      "answers": [
+        "6",
+        "8",
+        "10",
+        "2"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 8 away from 14 to get 6."
+    },
+    {
+      "id": 80,
+      "question": "What is 17 - 16?",
+      "answers": [
+        "0",
+        "2",
+        "4",
+        "1"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 16 away from 17 to get 1."
+    },
+    {
+      "id": 81,
+      "question": "What is 15 - 12?",
+      "answers": [
+        "0",
+        "6",
+        "2",
+        "3"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 12 away from 15 to get 3."
+    },
+    {
+      "id": 82,
+      "question": "What is 3 - 2?",
+      "answers": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 2 away from 3 to get 1."
+    },
+    {
+      "id": 83,
+      "question": "What is 14 - 2?",
+      "answers": [
+        "13",
+        "10",
+        "12",
+        "8"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 2 away from 14 to get 12."
+    },
+    {
+      "id": 84,
+      "question": "What is 19 - 9?",
+      "answers": [
+        "6",
+        "8",
+        "10",
+        "14"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 9 away from 19 to get 10."
+    },
+    {
+      "id": 85,
+      "question": "What is 11 - 5?",
+      "answers": [
+        "6",
+        "8",
+        "2",
+        "9"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 5 away from 11 to get 6."
+    },
+    {
+      "id": 86,
+      "question": "What is 20 - 7?",
+      "answers": [
+        "12",
+        "9",
+        "11",
+        "13"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 7 away from 20 to get 13."
+    },
+    {
+      "id": 87,
+      "question": "What is 12 - 8?",
+      "answers": [
+        "5",
+        "7",
+        "2",
+        "4"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 8 away from 12 to get 4."
+    },
+    {
+      "id": 88,
+      "question": "What is 20 - 9?",
+      "answers": [
+        "11",
+        "14",
+        "15",
+        "7"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 9 away from 20 to get 11."
+    },
+    {
+      "id": 89,
+      "question": "What is 12 - 6?",
+      "answers": [
+        "7",
+        "9",
+        "2",
+        "6"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 6 away from 12 to get 6."
+    },
+    {
+      "id": 90,
+      "question": "What is 19 - 18?",
+      "answers": [
+        "3",
+        "5",
+        "0",
+        "1"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 18 away from 19 to get 1."
+    },
+    {
+      "id": 91,
+      "question": "What is 12 - 10?",
+      "answers": [
+        "2",
+        "6",
+        "4",
+        "1"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 10 away from 12 to get 2."
+    },
+    {
+      "id": 92,
+      "question": "What is 19 - 12?",
+      "answers": [
+        "8",
+        "5",
+        "7",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 12 away from 19 to get 7."
+    },
+    {
+      "id": 93,
+      "question": "What is 19 - 4?",
+      "answers": [
+        "19",
+        "16",
+        "15",
+        "17"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 4 away from 19 to get 15."
+    },
+    {
+      "id": 94,
+      "question": "What is 19 - 16?",
+      "answers": [
+        "0",
+        "1",
+        "7",
+        "3"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 16 away from 19 to get 3."
+    },
+    {
+      "id": 95,
+      "question": "What is 11 - 6?",
+      "answers": [
+        "8",
+        "5",
+        "2",
+        "6"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 6 away from 11 to get 5."
+    },
+    {
+      "id": 96,
+      "question": "What is 7 - 6?",
+      "answers": [
+        "3",
+        "0",
+        "1",
+        "2"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 6 away from 7 to get 1."
+    },
+    {
+      "id": 97,
+      "question": "What is 13 - 10?",
+      "answers": [
+        "3",
+        "2",
+        "5",
+        "4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 10 away from 13 to get 3."
+    },
+    {
+      "id": 98,
+      "question": "What is 13 - 9?",
+      "answers": [
+        "4",
+        "5",
+        "8",
+        "3"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 9 away from 13 to get 4."
+    },
+    {
+      "id": 99,
+      "question": "What is 13 - 1?",
+      "answers": [
+        "12",
+        "14",
+        "8",
+        "13"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 1 away from 13 to get 12."
+    },
+    {
+      "id": 100,
+      "question": "What is 16 - 4?",
+      "answers": [
+        "9",
+        "10",
+        "13",
+        "12"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 4 away from 16 to get 12."
+    },
+    {
+      "id": 101,
+      "question": "What is 18 - 1?",
+      "answers": [
+        "16",
+        "19",
+        "17",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 1 away from 18 to get 17."
+    },
+    {
+      "id": 102,
+      "question": "What is 9 - 7?",
+      "answers": [
+        "1",
+        "4",
+        "6",
+        "2"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 7 away from 9 to get 2."
+    },
+    {
+      "id": 103,
+      "question": "What is 12 - 4?",
+      "answers": [
+        "6",
+        "5",
+        "8",
+        "12"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 4 away from 12 to get 8."
+    },
+    {
+      "id": 104,
+      "question": "What is 9 - 4?",
+      "answers": [
+        "5",
+        "7",
+        "9",
+        "6"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 4 away from 9 to get 5."
+    },
+    {
+      "id": 105,
+      "question": "What is 14 - 12?",
+      "answers": [
+        "0",
+        "1",
+        "5",
+        "2"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 12 away from 14 to get 2."
+    },
+    {
+      "id": 106,
+      "question": "What is 17 - 12?",
+      "answers": [
+        "5",
+        "8",
+        "7",
+        "9"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 12 away from 17 to get 5."
+    },
+    {
+      "id": 107,
+      "question": "What is 20 - 20?",
+      "answers": [
+        "0",
+        "3",
+        "1",
+        "4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 20 away from 20 to get 0."
+    },
+    {
+      "id": 108,
+      "question": "What is 8 - 3?",
+      "answers": [
+        "3",
+        "8",
+        "5",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 3 away from 8 to get 5."
+    },
+    {
+      "id": 109,
+      "question": "What is 9 - 8?",
+      "answers": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 8 away from 9 to get 1."
+    },
+    {
+      "id": 110,
+      "question": "What is 18 - 4?",
+      "answers": [
+        "13",
+        "14",
+        "10",
+        "11"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 4 away from 18 to get 14."
+    },
+    {
+      "id": 111,
+      "question": "What is 16 - 3?",
+      "answers": [
+        "10",
+        "13",
+        "16",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 3 away from 16 to get 13."
+    },
+    {
+      "id": 112,
+      "question": "What is 20 - 17?",
+      "answers": [
+        "0",
+        "3",
+        "5",
+        "7"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 17 away from 20 to get 3."
+    },
+    {
+      "id": 113,
+      "question": "What is 19 - 11?",
+      "answers": [
+        "8",
+        "11",
+        "5",
+        "10"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 11 away from 19 to get 8."
+    },
+    {
+      "id": 114,
+      "question": "What is 12 - 5?",
+      "answers": [
+        "10",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 5 away from 12 to get 7."
+    },
+    {
+      "id": 115,
+      "question": "What is 20 - 6?",
+      "answers": [
+        "14",
+        "18",
+        "10",
+        "17"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 6 away from 20 to get 14."
+    },
+    {
+      "id": 116,
+      "question": "What is 19 - 6?",
+      "answers": [
+        "13",
+        "15",
+        "11",
+        "12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 6 away from 19 to get 13."
+    },
+    {
+      "id": 117,
+      "question": "What is 18 - 11?",
+      "answers": [
+        "3",
+        "7",
+        "6",
+        "4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 11 away from 18 to get 7."
+    },
+    {
+      "id": 118,
+      "question": "What is 3 - 3?",
+      "answers": [
+        "3",
+        "4",
+        "0",
+        "2"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 3 away from 3 to get 0."
+    },
+    {
+      "id": 119,
+      "question": "What is 14 - 7?",
+      "answers": [
+        "11",
+        "7",
+        "9",
+        "4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 7 away from 14 to get 7."
+    },
+    {
+      "id": 120,
+      "question": "What is 15 - 15?",
+      "answers": [
+        "4",
+        "0",
+        "1",
+        "2"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 15 away from 15 to get 0."
+    },
+    {
+      "id": 121,
+      "question": "What is 14 - 4?",
+      "answers": [
+        "9",
+        "10",
+        "11",
+        "13"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 4 away from 14 to get 10."
+    },
+    {
+      "id": 122,
+      "question": "What is 4 - 4?",
+      "answers": [
+        "0",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 4 away from 4 to get 0."
+    },
+    {
+      "id": 123,
+      "question": "What is 20 - 11?",
+      "answers": [
+        "7",
+        "8",
+        "9",
+        "13"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 11 away from 20 to get 9."
+    },
+    {
+      "id": 124,
+      "question": "What is 5 - 3?",
+      "answers": [
+        "6",
+        "0",
+        "5",
+        "2"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 3 away from 5 to get 2."
+    },
+    {
+      "id": 125,
+      "question": "What is 18 - 12?",
+      "answers": [
+        "10",
+        "9",
+        "6",
+        "3"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 12 away from 18 to get 6."
+    },
+    {
+      "id": 126,
+      "question": "What is 8 - 4?",
+      "answers": [
+        "8",
+        "4",
+        "3",
+        "1"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 4 away from 8 to get 4."
+    },
+    {
+      "id": 127,
+      "question": "What is 14 - 6?",
+      "answers": [
+        "10",
+        "5",
+        "8",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 6 away from 14 to get 8."
+    },
+    {
+      "id": 128,
+      "question": "What is 15 - 11?",
+      "answers": [
+        "3",
+        "6",
+        "4",
+        "0"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 11 away from 15 to get 4."
+    },
+    {
+      "id": 129,
+      "question": "What is 16 - 6?",
+      "answers": [
+        "7",
+        "10",
+        "6",
+        "14"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 6 away from 16 to get 10."
+    },
+    {
+      "id": 130,
+      "question": "What is 7 - 5?",
+      "answers": [
+        "0",
+        "2",
+        "5",
+        "4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 5 away from 7 to get 2."
+    },
+    {
+      "id": 131,
+      "question": "What is 19 - 14?",
+      "answers": [
+        "9",
+        "7",
+        "4",
+        "5"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 14 away from 19 to get 5."
+    },
+    {
+      "id": 132,
+      "question": "What is 18 - 16?",
+      "answers": [
+        "0",
+        "2",
+        "3",
+        "1"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 16 away from 18 to get 2."
+    },
+    {
+      "id": 133,
+      "question": "What is 16 - 9?",
+      "answers": [
+        "9",
+        "7",
+        "11",
+        "8"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 9 away from 16 to get 7."
+    },
+    {
+      "id": 134,
+      "question": "What is 20 - 13?",
+      "answers": [
+        "9",
+        "10",
+        "5",
+        "7"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 13 away from 20 to get 7."
+    },
+    {
+      "id": 135,
+      "question": "What is 11 - 1?",
+      "answers": [
+        "11",
+        "13",
+        "6",
+        "10"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 1 away from 11 to get 10."
+    },
+    {
+      "id": 136,
+      "question": "What is 13 - 7?",
+      "answers": [
+        "7",
+        "2",
+        "6",
+        "5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 7 away from 13 to get 6."
+    },
+    {
+      "id": 137,
+      "question": "What is 6 - 2?",
+      "answers": [
+        "1",
+        "7",
+        "6",
+        "4"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 2 away from 6 to get 4."
+    },
+    {
+      "id": 138,
+      "question": "What is 12 - 12?",
+      "answers": [
+        "1",
+        "0",
+        "4",
+        "3"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 12 away from 12 to get 0."
+    },
+    {
+      "id": 139,
+      "question": "What is 13 - 2?",
+      "answers": [
+        "11",
+        "9",
+        "10",
+        "13"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 2 away from 13 to get 11."
+    },
+    {
+      "id": 140,
+      "question": "What is 11 - 7?",
+      "answers": [
+        "2",
+        "7",
+        "4",
+        "0"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 7 away from 11 to get 4."
+    },
+    {
+      "id": 141,
+      "question": "What number comes right after 0?",
+      "answers": [
+        "1",
+        "3",
+        "2",
+        "0"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one more than 0: 1."
+    },
+    {
+      "id": 142,
+      "question": "What number comes right after 1?",
+      "answers": [
+        "0",
+        "6",
+        "1",
+        "2"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Count one more than 1: 2."
+    },
+    {
+      "id": 143,
+      "question": "What number comes right after 2?",
+      "answers": [
+        "1",
+        "3",
+        "2",
+        "4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one more than 2: 3."
+    },
+    {
+      "id": 144,
+      "question": "What number comes right after 3?",
+      "answers": [
+        "6",
+        "4",
+        "7",
+        "1"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one more than 3: 4."
+    },
+    {
+      "id": 145,
+      "question": "What number comes right after 4?",
+      "answers": [
+        "9",
+        "1",
+        "4",
+        "5"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Count one more than 4: 5."
+    },
+    {
+      "id": 146,
+      "question": "What number comes right after 5?",
+      "answers": [
+        "9",
+        "4",
+        "7",
+        "6"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Count one more than 5: 6."
+    },
+    {
+      "id": 147,
+      "question": "What number comes right after 6?",
+      "answers": [
+        "7",
+        "4",
+        "8",
+        "10"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one more than 6: 7."
+    },
+    {
+      "id": 148,
+      "question": "What number comes right after 7?",
+      "answers": [
+        "4",
+        "11",
+        "8",
+        "12"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one more than 7: 8."
+    },
+    {
+      "id": 149,
+      "question": "What number comes right after 8?",
+      "answers": [
+        "8",
+        "10",
+        "9",
+        "5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one more than 8: 9."
+    },
+    {
+      "id": 150,
+      "question": "What number comes right after 9?",
+      "answers": [
+        "10",
+        "8",
+        "12",
+        "13"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one more than 9: 10."
+    },
+    {
+      "id": 151,
+      "question": "What number comes right after 10?",
+      "answers": [
+        "10",
+        "14",
+        "11",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one more than 10: 11."
+    },
+    {
+      "id": 152,
+      "question": "What number comes right after 11?",
+      "answers": [
+        "16",
+        "12",
+        "11",
+        "13"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one more than 11: 12."
+    },
+    {
+      "id": 153,
+      "question": "What number comes right after 12?",
+      "answers": [
+        "13",
+        "11",
+        "16",
+        "12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one more than 12: 13."
+    },
+    {
+      "id": 154,
+      "question": "What number comes right after 13?",
+      "answers": [
+        "14",
+        "11",
+        "13",
+        "17"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one more than 13: 14."
+    },
+    {
+      "id": 155,
+      "question": "What number comes right after 14?",
+      "answers": [
+        "19",
+        "15",
+        "16",
+        "18"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one more than 14: 15."
+    },
+    {
+      "id": 156,
+      "question": "What number comes right after 15?",
+      "answers": [
+        "15",
+        "16",
+        "14",
+        "20"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one more than 15: 16."
+    },
+    {
+      "id": 157,
+      "question": "What number comes right after 16?",
+      "answers": [
+        "13",
+        "17",
+        "16",
+        "18"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one more than 16: 17."
+    },
+    {
+      "id": 158,
+      "question": "What number comes right after 17?",
+      "answers": [
+        "14",
+        "19",
+        "18",
+        "20"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one more than 17: 18."
+    },
+    {
+      "id": 159,
+      "question": "What number comes right after 18?",
+      "answers": [
+        "19",
+        "20",
+        "17",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one more than 18: 19."
+    },
+    {
+      "id": 160,
+      "question": "What number comes right after 19?",
+      "answers": [
+        "18",
+        "20",
+        "17",
+        "16"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one more than 19: 20."
+    },
+    {
+      "id": 161,
+      "question": "What number comes right before 1?",
+      "answers": [
+        "2",
+        "3",
+        "0",
+        "4"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one less than 1: 0."
+    },
+    {
+      "id": 162,
+      "question": "What number comes right before 2?",
+      "answers": [
+        "1",
+        "5",
+        "4",
+        "0"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one less than 2: 1."
+    },
+    {
+      "id": 163,
+      "question": "What number comes right before 3?",
+      "answers": [
+        "0",
+        "2",
+        "6",
+        "4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one less than 3: 2."
+    },
+    {
+      "id": 164,
+      "question": "What number comes right before 4?",
+      "answers": [
+        "1",
+        "4",
+        "3",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one less than 4: 3."
+    },
+    {
+      "id": 165,
+      "question": "What number comes right before 5?",
+      "answers": [
+        "4",
+        "8",
+        "6",
+        "7"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one less than 5: 4."
+    },
+    {
+      "id": 166,
+      "question": "What number comes right before 6?",
+      "answers": [
+        "7",
+        "5",
+        "9",
+        "1"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one less than 6: 5."
+    },
+    {
+      "id": 167,
+      "question": "What number comes right before 7?",
+      "answers": [
+        "6",
+        "3",
+        "5",
+        "4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one less than 7: 6."
+    },
+    {
+      "id": 168,
+      "question": "What number comes right before 8?",
+      "answers": [
+        "8",
+        "3",
+        "5",
+        "7"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Count one less than 8: 7."
+    },
+    {
+      "id": 169,
+      "question": "What number comes right before 9?",
+      "answers": [
+        "6",
+        "11",
+        "4",
+        "8"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Count one less than 9: 8."
+    },
+    {
+      "id": 170,
+      "question": "What number comes right before 10?",
+      "answers": [
+        "6",
+        "9",
+        "5",
+        "11"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one less than 10: 9."
+    },
+    {
+      "id": 171,
+      "question": "What number comes right before 11?",
+      "answers": [
+        "9",
+        "13",
+        "10",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one less than 11: 10."
+    },
+    {
+      "id": 172,
+      "question": "What number comes right before 12?",
+      "answers": [
+        "11",
+        "9",
+        "7",
+        "14"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one less than 12: 11."
+    },
+    {
+      "id": 173,
+      "question": "What number comes right before 13?",
+      "answers": [
+        "13",
+        "8",
+        "12",
+        "14"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one less than 13: 12."
+    },
+    {
+      "id": 174,
+      "question": "What number comes right before 14?",
+      "answers": [
+        "9",
+        "11",
+        "16",
+        "13"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Count one less than 14: 13."
+    },
+    {
+      "id": 175,
+      "question": "What number comes right before 15?",
+      "answers": [
+        "15",
+        "10",
+        "11",
+        "14"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Count one less than 15: 14."
+    },
+    {
+      "id": 176,
+      "question": "What number comes right before 16?",
+      "answers": [
+        "11",
+        "19",
+        "15",
+        "12"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one less than 16: 15."
+    },
+    {
+      "id": 177,
+      "question": "What number comes right before 17?",
+      "answers": [
+        "12",
+        "16",
+        "18",
+        "13"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Count one less than 17: 16."
+    },
+    {
+      "id": 178,
+      "question": "What number comes right before 18?",
+      "answers": [
+        "17",
+        "18",
+        "13",
+        "19"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one less than 18: 17."
+    },
+    {
+      "id": 179,
+      "question": "What number comes right before 19?",
+      "answers": [
+        "19",
+        "14",
+        "18",
+        "16"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Count one less than 19: 18."
+    },
+    {
+      "id": 180,
+      "question": "What number comes right before 20?",
+      "answers": [
+        "19",
+        "15",
+        "20",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Count one less than 20: 19."
+    },
+    {
+      "id": 181,
+      "question": "What comes next: 0, 1, 2, __?",
+      "answers": [
+        "0",
+        "3",
+        "5",
+        "6"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The numbers go up by one. Next is 3."
+    },
+    {
+      "id": 182,
+      "question": "What comes next: 1, 2, 3, __?",
+      "answers": [
+        "4",
+        "3",
+        "7",
+        "0"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The numbers go up by one. Next is 4."
+    },
+    {
+      "id": 183,
+      "question": "What comes next: 2, 3, 4, __?",
+      "answers": [
+        "9",
+        "1",
+        "6",
+        "5"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The numbers go up by one. Next is 5."
+    },
+    {
+      "id": 184,
+      "question": "What comes next: 3, 4, 5, __?",
+      "answers": [
+        "4",
+        "2",
+        "6",
+        "7"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 6."
+    },
+    {
+      "id": 185,
+      "question": "What comes next: 4, 5, 6, __?",
+      "answers": [
+        "9",
+        "6",
+        "3",
+        "7"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The numbers go up by one. Next is 7."
+    },
+    {
+      "id": 186,
+      "question": "What comes next: 5, 6, 7, __?",
+      "answers": [
+        "11",
+        "6",
+        "8",
+        "5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 8."
+    },
+    {
+      "id": 187,
+      "question": "What comes next: 6, 7, 8, __?",
+      "answers": [
+        "10",
+        "13",
+        "9",
+        "8"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 9."
+    },
+    {
+      "id": 188,
+      "question": "What comes next: 7, 8, 9, __?",
+      "answers": [
+        "8",
+        "9",
+        "10",
+        "14"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 10."
+    },
+    {
+      "id": 189,
+      "question": "What comes next: 8, 9, 10, __?",
+      "answers": [
+        "9",
+        "11",
+        "13",
+        "7"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The numbers go up by one. Next is 11."
+    },
+    {
+      "id": 190,
+      "question": "What comes next: 9, 10, 11, __?",
+      "answers": [
+        "10",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The numbers go up by one. Next is 12."
+    },
+    {
+      "id": 191,
+      "question": "What comes next: 10, 11, 12, __?",
+      "answers": [
+        "16",
+        "9",
+        "13",
+        "14"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 13."
+    },
+    {
+      "id": 192,
+      "question": "What comes next: 11, 12, 13, __?",
+      "answers": [
+        "14",
+        "12",
+        "13",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The numbers go up by one. Next is 14."
+    },
+    {
+      "id": 193,
+      "question": "What comes next: 12, 13, 14, __?",
+      "answers": [
+        "11",
+        "13",
+        "15",
+        "16"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 15."
+    },
+    {
+      "id": 194,
+      "question": "What comes next: 13, 14, 15, __?",
+      "answers": [
+        "17",
+        "16",
+        "14",
+        "15"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The numbers go up by one. Next is 16."
+    },
+    {
+      "id": 195,
+      "question": "What comes next: 14, 15, 16, __?",
+      "answers": [
+        "18",
+        "15",
+        "17",
+        "20"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 17."
+    },
+    {
+      "id": 196,
+      "question": "What comes next: 15, 16, 17, __?",
+      "answers": [
+        "14",
+        "16",
+        "18",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 18."
+    },
+    {
+      "id": 197,
+      "question": "What comes next: 16, 17, 18, __?",
+      "answers": [
+        "18",
+        "15",
+        "19",
+        "17"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go up by one. Next is 19."
+    },
+    {
+      "id": 198,
+      "question": "What comes next: 17, 18, 19, __?",
+      "answers": [
+        "20",
+        "18",
+        "17",
+        "19"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The numbers go up by one. Next is 20."
+    },
+    {
+      "id": 199,
+      "question": "What comes next: 3, 2, 1, __?",
+      "answers": [
+        "1",
+        "3",
+        "2",
+        "0"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The numbers go down by one. Next is 0."
+    },
+    {
+      "id": 200,
+      "question": "What comes next: 4, 3, 2, __?",
+      "answers": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The numbers go down by one. Next is 1."
+    },
+    {
+      "id": 201,
+      "question": "What comes next: 5, 4, 3, __?",
+      "answers": [
+        "5",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go down by one. Next is 2."
+    },
+    {
+      "id": 202,
+      "question": "What comes next: 6, 5, 4, __?",
+      "answers": [
+        "5",
+        "1",
+        "3",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go down by one. Next is 3."
+    },
+    {
+      "id": 203,
+      "question": "What comes next: 7, 6, 5, __?",
+      "answers": [
+        "4",
+        "0",
+        "1",
+        "6"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The numbers go down by one. Next is 4."
+    },
+    {
+      "id": 204,
+      "question": "What comes next: 8, 7, 6, __?",
+      "answers": [
+        "4",
+        "5",
+        "2",
+        "8"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The numbers go down by one. Next is 5."
+    },
+    {
+      "id": 205,
+      "question": "What comes next: 9, 8, 7, __?",
+      "answers": [
+        "6",
+        "10",
+        "9",
+        "4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The numbers go down by one. Next is 6."
+    },
+    {
+      "id": 206,
+      "question": "What comes next: 10, 9, 8, __?",
+      "answers": [
+        "8",
+        "6",
+        "5",
+        "7"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The numbers go down by one. Next is 7."
+    },
+    {
+      "id": 207,
+      "question": "What comes next: 11, 10, 9, __?",
+      "answers": [
+        "5",
+        "10",
+        "12",
+        "8"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The numbers go down by one. Next is 8."
+    },
+    {
+      "id": 208,
+      "question": "What comes next: 12, 11, 10, __?",
+      "answers": [
+        "10",
+        "9",
+        "13",
+        "11"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The numbers go down by one. Next is 9."
+    },
+    {
+      "id": 209,
+      "question": "What comes next: 13, 12, 11, __?",
+      "answers": [
+        "13",
+        "8",
+        "10",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go down by one. Next is 10."
+    },
+    {
+      "id": 210,
+      "question": "What comes next: 14, 13, 12, __?",
+      "answers": [
+        "9",
+        "12",
+        "11",
+        "8"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go down by one. Next is 11."
+    },
+    {
+      "id": 211,
+      "question": "What comes next: 15, 14, 13, __?",
+      "answers": [
+        "8",
+        "9",
+        "12",
+        "16"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The numbers go down by one. Next is 12."
+    },
+    {
+      "id": 212,
+      "question": "What comes next: 16, 15, 14, __?",
+      "answers": [
+        "11",
+        "16",
+        "14",
+        "13"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The numbers go down by one. Next is 13."
+    },
+    {
+      "id": 213,
+      "question": "What comes next: 17, 16, 15, __?",
+      "answers": [
+        "17",
+        "10",
+        "13",
+        "14"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The numbers go down by one. Next is 14."
+    },
+    {
+      "id": 214,
+      "question": "What comes next: 18, 17, 16, __?",
+      "answers": [
+        "13",
+        "15",
+        "19",
+        "18"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The numbers go down by one. Next is 15."
+    },
+    {
+      "id": 215,
+      "question": "What comes next: 19, 18, 17, __?",
+      "answers": [
+        "16",
+        "18",
+        "14",
+        "20"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The numbers go down by one. Next is 16."
+    },
+    {
+      "id": 216,
+      "question": "What comes next: 20, 19, 18, __?",
+      "answers": [
+        "17",
+        "15",
+        "18",
+        "19"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The numbers go down by one. Next is 17."
+    },
+    {
+      "id": 217,
+      "question": "Which number is greatest: 13, 15, 16, 20?",
+      "answers": [
+        "13",
+        "16",
+        "15",
+        "20"
+      ],
+      "correctAnswer": 3,
+      "explanation": "20 is the greatest of these four numbers."
+    },
+    {
+      "id": 218,
+      "question": "Which number is greatest: 0, 4, 9, 11?",
+      "answers": [
+        "4",
+        "0",
+        "11",
+        "9"
+      ],
+      "correctAnswer": 2,
+      "explanation": "11 is the greatest of these four numbers."
+    },
+    {
+      "id": 219,
+      "question": "Which number is greatest: 5, 10, 12, 15?",
+      "answers": [
+        "10",
+        "15",
+        "5",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "15 is the greatest of these four numbers."
+    },
+    {
+      "id": 220,
+      "question": "Which number is greatest: 4, 7, 10, 11?",
+      "answers": [
+        "11",
+        "10",
+        "4",
+        "7"
+      ],
+      "correctAnswer": 0,
+      "explanation": "11 is the greatest of these four numbers."
+    },
+    {
+      "id": 221,
+      "question": "Which number is greatest: 3, 5, 11, 12?",
+      "answers": [
+        "5",
+        "12",
+        "3",
+        "11"
+      ],
+      "correctAnswer": 1,
+      "explanation": "12 is the greatest of these four numbers."
+    },
+    {
+      "id": 222,
+      "question": "Which number is greatest: 2, 8, 12, 16?",
+      "answers": [
+        "16",
+        "12",
+        "2",
+        "8"
+      ],
+      "correctAnswer": 0,
+      "explanation": "16 is the greatest of these four numbers."
+    },
+    {
+      "id": 223,
+      "question": "Which number is greatest: 5, 13, 14, 18?",
+      "answers": [
+        "13",
+        "5",
+        "14",
+        "18"
+      ],
+      "correctAnswer": 3,
+      "explanation": "18 is the greatest of these four numbers."
+    },
+    {
+      "id": 224,
+      "question": "Which number is greatest: 3, 9, 12, 18?",
+      "answers": [
+        "3",
+        "18",
+        "12",
+        "9"
+      ],
+      "correctAnswer": 1,
+      "explanation": "18 is the greatest of these four numbers."
+    },
+    {
+      "id": 225,
+      "question": "Which number is greatest: 10, 11, 16, 18?",
+      "answers": [
+        "16",
+        "10",
+        "18",
+        "11"
+      ],
+      "correctAnswer": 2,
+      "explanation": "18 is the greatest of these four numbers."
+    },
+    {
+      "id": 226,
+      "question": "Which number is greatest: 10, 16, 17, 19?",
+      "answers": [
+        "17",
+        "16",
+        "19",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "19 is the greatest of these four numbers."
+    },
+    {
+      "id": 227,
+      "question": "Which number is greatest: 3, 13, 17, 18?",
+      "answers": [
+        "17",
+        "18",
+        "3",
+        "13"
+      ],
+      "correctAnswer": 1,
+      "explanation": "18 is the greatest of these four numbers."
+    },
+    {
+      "id": 228,
+      "question": "Which number is greatest: 4, 5, 7, 17?",
+      "answers": [
+        "17",
+        "5",
+        "7",
+        "4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "17 is the greatest of these four numbers."
+    },
+    {
+      "id": 229,
+      "question": "Which number is greatest: 5, 17, 19, 20?",
+      "answers": [
+        "20",
+        "17",
+        "19",
+        "5"
+      ],
+      "correctAnswer": 0,
+      "explanation": "20 is the greatest of these four numbers."
+    },
+    {
+      "id": 230,
+      "question": "Which number is greatest: 0, 3, 10, 15?",
+      "answers": [
+        "10",
+        "3",
+        "0",
+        "15"
+      ],
+      "correctAnswer": 3,
+      "explanation": "15 is the greatest of these four numbers."
+    },
+    {
+      "id": 231,
+      "question": "Which number is greatest: 9, 12, 15, 16?",
+      "answers": [
+        "12",
+        "15",
+        "9",
+        "16"
+      ],
+      "correctAnswer": 3,
+      "explanation": "16 is the greatest of these four numbers."
+    },
+    {
+      "id": 232,
+      "question": "Which number is greatest: 1, 9, 12, 16?",
+      "answers": [
+        "16",
+        "9",
+        "1",
+        "12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "16 is the greatest of these four numbers."
+    },
+    {
+      "id": 233,
+      "question": "Which number is greatest: 8, 14, 17, 18?",
+      "answers": [
+        "18",
+        "14",
+        "17",
+        "8"
+      ],
+      "correctAnswer": 0,
+      "explanation": "18 is the greatest of these four numbers."
+    },
+    {
+      "id": 234,
+      "question": "Which number is greatest: 3, 12, 18, 20?",
+      "answers": [
+        "20",
+        "18",
+        "3",
+        "12"
+      ],
+      "correctAnswer": 0,
+      "explanation": "20 is the greatest of these four numbers."
+    },
+    {
+      "id": 235,
+      "question": "Which number is greatest: 5, 8, 10, 13?",
+      "answers": [
+        "10",
+        "13",
+        "8",
+        "5"
+      ],
+      "correctAnswer": 1,
+      "explanation": "13 is the greatest of these four numbers."
+    },
+    {
+      "id": 236,
+      "question": "Which number is greatest: 6, 8, 13, 14?",
+      "answers": [
+        "14",
+        "6",
+        "8",
+        "13"
+      ],
+      "correctAnswer": 0,
+      "explanation": "14 is the greatest of these four numbers."
+    },
+    {
+      "id": 237,
+      "question": "Which number is smallest: 8, 11, 14, 19?",
+      "answers": [
+        "14",
+        "11",
+        "19",
+        "8"
+      ],
+      "correctAnswer": 3,
+      "explanation": "8 is the smallest of these four numbers."
+    },
+    {
+      "id": 238,
+      "question": "Which number is smallest: 9, 13, 18, 19?",
+      "answers": [
+        "13",
+        "18",
+        "9",
+        "19"
+      ],
+      "correctAnswer": 2,
+      "explanation": "9 is the smallest of these four numbers."
+    },
+    {
+      "id": 239,
+      "question": "Which number is smallest: 3, 7, 17, 20?",
+      "answers": [
+        "20",
+        "7",
+        "17",
+        "3"
+      ],
+      "correctAnswer": 3,
+      "explanation": "3 is the smallest of these four numbers."
+    },
+    {
+      "id": 240,
+      "question": "Which number is smallest: 3, 6, 9, 14?",
+      "answers": [
+        "14",
+        "3",
+        "9",
+        "6"
+      ],
+      "correctAnswer": 1,
+      "explanation": "3 is the smallest of these four numbers."
+    },
+    {
+      "id": 241,
+      "question": "Which number is smallest: 1, 4, 10, 19?",
+      "answers": [
+        "19",
+        "10",
+        "1",
+        "4"
+      ],
+      "correctAnswer": 2,
+      "explanation": "1 is the smallest of these four numbers."
+    },
+    {
+      "id": 242,
+      "question": "Which number is smallest: 1, 2, 5, 16?",
+      "answers": [
+        "1",
+        "2",
+        "16",
+        "5"
+      ],
+      "correctAnswer": 0,
+      "explanation": "1 is the smallest of these four numbers."
+    },
+    {
+      "id": 243,
+      "question": "Which number is smallest: 2, 8, 10, 20?",
+      "answers": [
+        "20",
+        "8",
+        "2",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "2 is the smallest of these four numbers."
+    },
+    {
+      "id": 244,
+      "question": "Which number is smallest: 2, 8, 9, 15?",
+      "answers": [
+        "8",
+        "15",
+        "9",
+        "2"
+      ],
+      "correctAnswer": 3,
+      "explanation": "2 is the smallest of these four numbers."
+    },
+    {
+      "id": 245,
+      "question": "Which number is smallest: 3, 5, 9, 14?",
+      "answers": [
+        "9",
+        "5",
+        "14",
+        "3"
+      ],
+      "correctAnswer": 3,
+      "explanation": "3 is the smallest of these four numbers."
+    },
+    {
+      "id": 246,
+      "question": "Which number is smallest: 2, 3, 11, 13?",
+      "answers": [
+        "11",
+        "13",
+        "3",
+        "2"
+      ],
+      "correctAnswer": 3,
+      "explanation": "2 is the smallest of these four numbers."
+    },
+    {
+      "id": 247,
+      "question": "Which number is smallest: 0, 3, 8, 19?",
+      "answers": [
+        "0",
+        "3",
+        "8",
+        "19"
+      ],
+      "correctAnswer": 0,
+      "explanation": "0 is the smallest of these four numbers."
+    },
+    {
+      "id": 248,
+      "question": "Which number is smallest: 9, 11, 12, 19?",
+      "answers": [
+        "9",
+        "19",
+        "12",
+        "11"
+      ],
+      "correctAnswer": 0,
+      "explanation": "9 is the smallest of these four numbers."
+    },
+    {
+      "id": 249,
+      "question": "Which number is smallest: 3, 5, 6, 11?",
+      "answers": [
+        "11",
+        "5",
+        "3",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "3 is the smallest of these four numbers."
+    },
+    {
+      "id": 250,
+      "question": "Which number is smallest: 0, 1, 4, 18?",
+      "answers": [
+        "1",
+        "18",
+        "0",
+        "4"
+      ],
+      "correctAnswer": 2,
+      "explanation": "0 is the smallest of these four numbers."
+    },
+    {
+      "id": 251,
+      "question": "Which number is smallest: 4, 5, 14, 18?",
+      "answers": [
+        "18",
+        "4",
+        "14",
+        "5"
+      ],
+      "correctAnswer": 1,
+      "explanation": "4 is the smallest of these four numbers."
+    },
+    {
+      "id": 252,
+      "question": "Which number is smallest: 0, 2, 6, 14?",
+      "answers": [
+        "14",
+        "6",
+        "0",
+        "2"
+      ],
+      "correctAnswer": 2,
+      "explanation": "0 is the smallest of these four numbers."
+    },
+    {
+      "id": 253,
+      "question": "Which number is smallest: 2, 5, 15, 19?",
+      "answers": [
+        "2",
+        "15",
+        "5",
+        "19"
+      ],
+      "correctAnswer": 0,
+      "explanation": "2 is the smallest of these four numbers."
+    },
+    {
+      "id": 254,
+      "question": "Which number is smallest: 1, 4, 5, 14?",
+      "answers": [
+        "1",
+        "4",
+        "14",
+        "5"
+      ],
+      "correctAnswer": 0,
+      "explanation": "1 is the smallest of these four numbers."
+    },
+    {
+      "id": 255,
+      "question": "Which number is smallest: 10, 12, 15, 17?",
+      "answers": [
+        "17",
+        "10",
+        "15",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "10 is the smallest of these four numbers."
+    },
+    {
+      "id": 256,
+      "question": "Which number is smallest: 2, 4, 9, 17?",
+      "answers": [
+        "2",
+        "17",
+        "9",
+        "4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "2 is the smallest of these four numbers."
+    },
+    {
+      "id": 257,
+      "question": "Nova has 1 stars. PIX gives Nova 2 more. How many stars does Nova have now?",
+      "answers": [
+        "3",
+        "4",
+        "5",
+        "1"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Add 1 and 2: 3 stars."
+    },
+    {
+      "id": 258,
+      "question": "Nova has 2 stars. PIX gives Nova 3 more. How many stars does Nova have now?",
+      "answers": [
+        "7",
+        "5",
+        "9",
+        "8"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Add 2 and 3: 5 stars."
+    },
+    {
+      "id": 259,
+      "question": "Nova has 3 stars. PIX gives Nova 4 more. How many stars does Nova have now?",
+      "answers": [
+        "10",
+        "3",
+        "7",
+        "5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Add 3 and 4: 7 stars."
+    },
+    {
+      "id": 260,
+      "question": "Nova has 4 stars. PIX gives Nova 1 more. How many stars does Nova have now?",
+      "answers": [
+        "4",
+        "6",
+        "5",
+        "9"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Add 4 and 1: 5 stars."
+    },
+    {
+      "id": 261,
+      "question": "Nova has 5 stars. PIX gives Nova 2 more. How many stars does Nova have now?",
+      "answers": [
+        "11",
+        "8",
+        "5",
+        "7"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Add 5 and 2: 7 stars."
+    },
+    {
+      "id": 262,
+      "question": "Nova has 6 stars. PIX gives Nova 3 more. How many stars does Nova have now?",
+      "answers": [
+        "8",
+        "13",
+        "9",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Add 6 and 3: 9 stars."
+    },
+    {
+      "id": 263,
+      "question": "Nova has 7 stars. PIX gives Nova 4 more. How many stars does Nova have now?",
+      "answers": [
+        "11",
+        "10",
+        "15",
+        "8"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Add 7 and 4: 11 stars."
+    },
+    {
+      "id": 264,
+      "question": "Nova has 8 stars. PIX gives Nova 1 more. How many stars does Nova have now?",
+      "answers": [
+        "7",
+        "13",
+        "9",
+        "10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Add 8 and 1: 9 stars."
+    },
+    {
+      "id": 265,
+      "question": "Nova has 9 stars. PIX gives Nova 2 more. How many stars does Nova have now?",
+      "answers": [
+        "11",
+        "13",
+        "12",
+        "15"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Add 9 and 2: 11 stars."
+    },
+    {
+      "id": 266,
+      "question": "Nova has 10 stars. PIX gives Nova 3 more. How many stars does Nova have now?",
+      "answers": [
+        "9",
+        "14",
+        "16",
+        "13"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Add 10 and 3: 13 stars."
+    },
+    {
+      "id": 267,
+      "question": "Nova has 11 stars. PIX gives Nova 4 more. How many stars does Nova have now?",
+      "answers": [
+        "15",
+        "14",
+        "13",
+        "16"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Add 11 and 4: 15 stars."
+    },
+    {
+      "id": 268,
+      "question": "Nova has 12 stars. PIX gives Nova 1 more. How many stars does Nova have now?",
+      "answers": [
+        "11",
+        "16",
+        "9",
+        "13"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Add 12 and 1: 13 stars."
+    },
+    {
+      "id": 269,
+      "question": "Nova has 13 stars. PIX gives Nova 2 more. How many stars does Nova have now?",
+      "answers": [
+        "12",
+        "15",
+        "14",
+        "11"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Add 13 and 2: 15 stars."
+    },
+    {
+      "id": 270,
+      "question": "Nova has 14 stars. PIX gives Nova 3 more. How many stars does Nova have now?",
+      "answers": [
+        "14",
+        "20",
+        "17",
+        "13"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Add 14 and 3: 17 stars."
+    },
+    {
+      "id": 271,
+      "question": "Nova has 15 stars. PIX gives Nova 4 more. How many stars does Nova have now?",
+      "answers": [
+        "17",
+        "19",
+        "16",
+        "18"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Add 15 and 4: 19 stars."
+    },
+    {
+      "id": 272,
+      "question": "Nova has 16 stars. PIX gives Nova 1 more. How many stars does Nova have now?",
+      "answers": [
+        "16",
+        "18",
+        "19",
+        "17"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Add 16 and 1: 17 stars."
+    },
+    {
+      "id": 273,
+      "question": "There are 4 apples. Nova eats 2. How many apples are left?",
+      "answers": [
+        "1",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctAnswer": 1,
+      "explanation": "4 minus 2 leaves 2 apples."
+    },
+    {
+      "id": 274,
+      "question": "There are 5 apples. Nova eats 3. How many apples are left?",
+      "answers": [
+        "0",
+        "6",
+        "3",
+        "2"
+      ],
+      "correctAnswer": 3,
+      "explanation": "5 minus 3 leaves 2 apples."
+    },
+    {
+      "id": 275,
+      "question": "There are 6 apples. Nova eats 1. How many apples are left?",
+      "answers": [
+        "9",
+        "5",
+        "4",
+        "1"
+      ],
+      "correctAnswer": 1,
+      "explanation": "6 minus 1 leaves 5 apples."
+    },
+    {
+      "id": 276,
+      "question": "There are 7 apples. Nova eats 2. How many apples are left?",
+      "answers": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "correctAnswer": 2,
+      "explanation": "7 minus 2 leaves 5 apples."
+    },
+    {
+      "id": 277,
+      "question": "There are 8 apples. Nova eats 3. How many apples are left?",
+      "answers": [
+        "7",
+        "3",
+        "5",
+        "2"
+      ],
+      "correctAnswer": 2,
+      "explanation": "8 minus 3 leaves 5 apples."
+    },
+    {
+      "id": 278,
+      "question": "There are 9 apples. Nova eats 1. How many apples are left?",
+      "answers": [
+        "6",
+        "11",
+        "8",
+        "5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "9 minus 1 leaves 8 apples."
+    },
+    {
+      "id": 279,
+      "question": "There are 10 apples. Nova eats 2. How many apples are left?",
+      "answers": [
+        "6",
+        "7",
+        "8",
+        "12"
+      ],
+      "correctAnswer": 2,
+      "explanation": "10 minus 2 leaves 8 apples."
+    },
+    {
+      "id": 280,
+      "question": "There are 11 apples. Nova eats 3. How many apples are left?",
+      "answers": [
+        "10",
+        "9",
+        "11",
+        "8"
+      ],
+      "correctAnswer": 3,
+      "explanation": "11 minus 3 leaves 8 apples."
+    },
+    {
+      "id": 281,
+      "question": "There are 12 apples. Nova eats 1. How many apples are left?",
+      "answers": [
+        "9",
+        "8",
+        "11",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "12 minus 1 leaves 11 apples."
+    },
+    {
+      "id": 282,
+      "question": "There are 13 apples. Nova eats 2. How many apples are left?",
+      "answers": [
+        "8",
+        "11",
+        "10",
+        "14"
+      ],
+      "correctAnswer": 1,
+      "explanation": "13 minus 2 leaves 11 apples."
+    },
+    {
+      "id": 283,
+      "question": "There are 14 apples. Nova eats 3. How many apples are left?",
+      "answers": [
+        "15",
+        "11",
+        "10",
+        "14"
+      ],
+      "correctAnswer": 1,
+      "explanation": "14 minus 3 leaves 11 apples."
+    },
+    {
+      "id": 284,
+      "question": "There are 15 apples. Nova eats 1. How many apples are left?",
+      "answers": [
+        "10",
+        "16",
+        "15",
+        "14"
+      ],
+      "correctAnswer": 3,
+      "explanation": "15 minus 1 leaves 14 apples."
+    },
+    {
+      "id": 285,
+      "question": "There are 16 apples. Nova eats 2. How many apples are left?",
+      "answers": [
+        "12",
+        "16",
+        "13",
+        "14"
+      ],
+      "correctAnswer": 3,
+      "explanation": "16 minus 2 leaves 14 apples."
+    },
+    {
+      "id": 286,
+      "question": "There are 17 apples. Nova eats 3. How many apples are left?",
+      "answers": [
+        "18",
+        "12",
+        "14",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "17 minus 3 leaves 14 apples."
+    },
+    {
+      "id": 287,
+      "question": "There are 18 apples. Nova eats 1. How many apples are left?",
+      "answers": [
+        "18",
+        "13",
+        "17",
+        "20"
+      ],
+      "correctAnswer": 2,
+      "explanation": "18 minus 1 leaves 17 apples."
+    },
+    {
+      "id": 288,
+      "question": "There are 19 apples. Nova eats 2. How many apples are left?",
+      "answers": [
+        "15",
+        "17",
+        "18",
+        "19"
+      ],
+      "correctAnswer": 1,
+      "explanation": "19 minus 2 leaves 17 apples."
+    },
+    {
+      "id": 289,
+      "question": "PIX sees 1 red balloons and 2 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "2",
+        "0",
+        "5",
+        "3"
+      ],
+      "correctAnswer": 3,
+      "explanation": "1 red plus 2 blue makes 3 balloons."
+    },
+    {
+      "id": 290,
+      "question": "PIX sees 2 red balloons and 3 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": 3,
+      "explanation": "2 red plus 3 blue makes 5 balloons."
+    },
+    {
+      "id": 291,
+      "question": "PIX sees 3 red balloons and 4 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "4",
+        "9",
+        "7",
+        "3"
+      ],
+      "correctAnswer": 2,
+      "explanation": "3 red plus 4 blue makes 7 balloons."
+    },
+    {
+      "id": 292,
+      "question": "PIX sees 4 red balloons and 1 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "9",
+        "5",
+        "1",
+        "3"
+      ],
+      "correctAnswer": 1,
+      "explanation": "4 red plus 1 blue makes 5 balloons."
+    },
+    {
+      "id": 293,
+      "question": "PIX sees 5 red balloons and 2 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "10",
+        "5",
+        "7",
+        "9"
+      ],
+      "correctAnswer": 2,
+      "explanation": "5 red plus 2 blue makes 7 balloons."
+    },
+    {
+      "id": 294,
+      "question": "PIX sees 6 red balloons and 3 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "8",
+        "5",
+        "9",
+        "12"
+      ],
+      "correctAnswer": 2,
+      "explanation": "6 red plus 3 blue makes 9 balloons."
+    },
+    {
+      "id": 295,
+      "question": "PIX sees 7 red balloons and 4 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "14",
+        "12",
+        "11",
+        "8"
+      ],
+      "correctAnswer": 2,
+      "explanation": "7 red plus 4 blue makes 11 balloons."
+    },
+    {
+      "id": 296,
+      "question": "PIX sees 8 red balloons and 1 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "9",
+        "8",
+        "10",
+        "13"
+      ],
+      "correctAnswer": 0,
+      "explanation": "8 red plus 1 blue makes 9 balloons."
+    },
+    {
+      "id": 297,
+      "question": "PIX sees 9 red balloons and 2 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "11",
+        "10",
+        "14",
+        "8"
+      ],
+      "correctAnswer": 0,
+      "explanation": "9 red plus 2 blue makes 11 balloons."
+    },
+    {
+      "id": 298,
+      "question": "PIX sees 10 red balloons and 3 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "16",
+        "13",
+        "17",
+        "15"
+      ],
+      "correctAnswer": 1,
+      "explanation": "10 red plus 3 blue makes 13 balloons."
+    },
+    {
+      "id": 299,
+      "question": "PIX sees 11 red balloons and 4 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "15",
+        "11",
+        "16",
+        "14"
+      ],
+      "correctAnswer": 0,
+      "explanation": "11 red plus 4 blue makes 15 balloons."
+    },
+    {
+      "id": 300,
+      "question": "PIX sees 12 red balloons and 1 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "12",
+        "13",
+        "15",
+        "10"
+      ],
+      "correctAnswer": 1,
+      "explanation": "12 red plus 1 blue makes 13 balloons."
+    },
+    {
+      "id": 301,
+      "question": "PIX sees 13 red balloons and 2 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "13",
+        "19",
+        "15",
+        "16"
+      ],
+      "correctAnswer": 2,
+      "explanation": "13 red plus 2 blue makes 15 balloons."
+    },
+    {
+      "id": 302,
+      "question": "PIX sees 14 red balloons and 3 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "13",
+        "20",
+        "17",
+        "14"
+      ],
+      "correctAnswer": 2,
+      "explanation": "14 red plus 3 blue makes 17 balloons."
+    },
+    {
+      "id": 303,
+      "question": "PIX sees 15 red balloons and 4 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "16",
+        "19",
+        "17",
+        "15"
+      ],
+      "correctAnswer": 1,
+      "explanation": "15 red plus 4 blue makes 19 balloons."
+    },
+    {
+      "id": 304,
+      "question": "PIX sees 16 red balloons and 1 blue balloons. How many balloons are there in all?",
+      "answers": [
+        "14",
+        "17",
+        "19",
+        "16"
+      ],
+      "correctAnswer": 1,
+      "explanation": "16 red plus 1 blue makes 17 balloons."
+    },
+    {
+      "id": 305,
+      "question": "A shelf has 4 books. Nova takes 2 books. How many books stay on the shelf?",
+      "answers": [
+        "5",
+        "2",
+        "6",
+        "0"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 2 from 4: 2 books stay."
+    },
+    {
+      "id": 306,
+      "question": "A shelf has 5 books. Nova takes 3 books. How many books stay on the shelf?",
+      "answers": [
+        "4",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 3 from 5: 2 books stay."
+    },
+    {
+      "id": 307,
+      "question": "A shelf has 6 books. Nova takes 1 books. How many books stay on the shelf?",
+      "answers": [
+        "1",
+        "5",
+        "9",
+        "4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 1 from 6: 5 books stay."
+    },
+    {
+      "id": 308,
+      "question": "A shelf has 7 books. Nova takes 2 books. How many books stay on the shelf?",
+      "answers": [
+        "5",
+        "4",
+        "6",
+        "8"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 2 from 7: 5 books stay."
+    },
+    {
+      "id": 309,
+      "question": "A shelf has 8 books. Nova takes 3 books. How many books stay on the shelf?",
+      "answers": [
+        "9",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 3 from 8: 5 books stay."
+    },
+    {
+      "id": 310,
+      "question": "A shelf has 9 books. Nova takes 1 books. How many books stay on the shelf?",
+      "answers": [
+        "11",
+        "8",
+        "12",
+        "7"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 1 from 9: 8 books stay."
+    },
+    {
+      "id": 311,
+      "question": "A shelf has 10 books. Nova takes 2 books. How many books stay on the shelf?",
+      "answers": [
+        "10",
+        "8",
+        "5",
+        "11"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 2 from 10: 8 books stay."
+    },
+    {
+      "id": 312,
+      "question": "A shelf has 11 books. Nova takes 3 books. How many books stay on the shelf?",
+      "answers": [
+        "8",
+        "6",
+        "4",
+        "7"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 3 from 11: 8 books stay."
+    },
+    {
+      "id": 313,
+      "question": "A shelf has 12 books. Nova takes 1 books. How many books stay on the shelf?",
+      "answers": [
+        "9",
+        "12",
+        "11",
+        "7"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 1 from 12: 11 books stay."
+    },
+    {
+      "id": 314,
+      "question": "A shelf has 13 books. Nova takes 2 books. How many books stay on the shelf?",
+      "answers": [
+        "8",
+        "15",
+        "9",
+        "11"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 2 from 13: 11 books stay."
+    },
+    {
+      "id": 315,
+      "question": "A shelf has 14 books. Nova takes 3 books. How many books stay on the shelf?",
+      "answers": [
+        "9",
+        "15",
+        "11",
+        "13"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 3 from 14: 11 books stay."
+    },
+    {
+      "id": 316,
+      "question": "A shelf has 15 books. Nova takes 1 books. How many books stay on the shelf?",
+      "answers": [
+        "11",
+        "14",
+        "15",
+        "13"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Take 1 from 15: 14 books stay."
+    },
+    {
+      "id": 317,
+      "question": "A shelf has 16 books. Nova takes 2 books. How many books stay on the shelf?",
+      "answers": [
+        "17",
+        "11",
+        "18",
+        "14"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Take 2 from 16: 14 books stay."
+    },
+    {
+      "id": 318,
+      "question": "A shelf has 17 books. Nova takes 3 books. How many books stay on the shelf?",
+      "answers": [
+        "14",
+        "16",
+        "17",
+        "11"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 3 from 17: 14 books stay."
+    },
+    {
+      "id": 319,
+      "question": "A shelf has 18 books. Nova takes 1 books. How many books stay on the shelf?",
+      "answers": [
+        "15",
+        "19",
+        "17",
+        "16"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Take 1 from 18: 17 books stay."
+    },
+    {
+      "id": 320,
+      "question": "A shelf has 19 books. Nova takes 2 books. How many books stay on the shelf?",
+      "answers": [
+        "17",
+        "16",
+        "13",
+        "18"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Take 2 from 19: 17 books stay."
+    }
+  ]
+}

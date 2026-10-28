@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="64" viewBox="0 0 48 64" shape-rendering="crispEdges" role="img" aria-label="Mission Control officer wearing a headset">
+  <path fill="#11263e" d="M14 0h20v4h6v8h4v20h-4v6h4v4h4v18h-6v4H6v-4H0V42h4v-4h6v-6H6V12h4V4h4z"/>
+  <path fill="#493c4c" d="M14 4h20v4h4v8H10v-4h4zM10 16h4v12h-4zm24-4h4v16h-4z"/>
+  <path fill="#9d6570" d="M14 8h18v4H14z"/>
+  <path fill="#deab88" d="M14 16h20v14h-4v6H18v-6h-4zM10 20h4v8h-4zm24 0h4v8h-4z"/>
+  <path fill="#b47b6b" d="M30 20h4v10h-4v6H20v-4h10zM14 28h4v4h-4z"/>
+  <path fill="#fff1cf" d="M17 19h5v3h-5zm10 0h5v3h-5z"/>
+  <path fill="#24364b" d="M19 19h3v4h-3zm8 0h3v4h-3z"/>
+  <path fill="#fff1cf" d="M21 28h8v2h-8z"/>
+  <path fill="#e4e6db" d="M10 12h4v16h-4zM34 12h4v16h-4z"/>
+  <path fill="#6e9fab" d="M6 16h6v12H6zm30 0h6v12h-6z"/>
+  <path fill="#c6e9e8" d="M6 18h4v6H6zm32 0h4v6h-4z"/>
+  <path fill="#607d93" d="M38 26h4v7H28v-3h10z"/>
+  <path fill="#ffbb62" d="M27 29h6v5h-6z"/>
+  <path fill="#32718b" d="M12 38h26v4h6v16H4V44h8z"/>
+  <path fill="#234e6d" d="M4 48h8v10H4zm30-8h4v4h6v14H34z"/>
+  <path fill="#7ad5d3" d="M14 38h6v8h-6zm16 0h6v8h-6z"/>
+  <path fill="#e6e9df" d="M20 36h10v6h-4v7h-2v-7h-4z"/>
+  <path fill="#142e48" d="M23 43h4v13h-4zM12 58h26v6H12z"/>
+  <path fill="#a5d9dd" d="M8 54h12v6H8zm22 0h12v6H30z"/>
+  <path fill="#deab88" d="M12 54h8v6h-8zm10 0h12v6H22z"/>
+  <path fill="#ffbc63" d="M32 46h6v3h-6z"/>
+  <path fill="#87e8ca" d="M14 48h3v3h-3z"/>
+</svg>

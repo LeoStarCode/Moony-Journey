@@ -1,0 +1,28 @@
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+.vs/
+*.swp
+*~
+
+# Credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+
+# Optional development tools and generated output
+node_modules/
+.cache/
+_site/
+coverage/
+playwright-report/
+test-results/
+*.log
+*.tmp
+*.temp

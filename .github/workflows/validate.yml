@@ -1,0 +1,81 @@
+name: Validate game
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out game
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+      - name: Check JavaScript syntax
+        run: node --check script.js
+      - name: Validate question bank and local assets
+        shell: bash
+        run: |
+          node <<'NODE'
+          const assert = require('node:assert/strict');
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const primary = fs.readdirSync('.').filter(name => /\.(html|css|js)$/.test(name)).sort();
+          assert.deepEqual(primary, ['index.html', 'script.js', 'style.css'], 'Keep exactly the three primary code files.');
+
+          const { questions } = JSON.parse(fs.readFileSync('questions.json', 'utf8'));
+          assert(Array.isArray(questions) && questions.length >= 120, 'Include at least 120 questions.');
+          const ids = new Set();
+          for (const q of questions) {
+            assert(q && ['number', 'string'].includes(typeof q.id), 'Each question needs an ID.');
+            const id = String(q.id);
+            assert(id.trim() && !ids.has(id) && (typeof q.id !== 'number' || Number.isFinite(q.id)), `Invalid or duplicate ID: ${id}`);
+            ids.add(id);
+            assert(typeof q.question === 'string' && q.question.trim(), `Missing question text: ${id}`);
+            assert(Array.isArray(q.answers) && q.answers.length === 4, `Provide four answers: ${id}`);
+            assert(q.answers.every(answer => typeof answer === 'string' && answer.trim()), `Invalid answer text: ${id}`);
+            assert.equal(new Set(q.answers.map(answer => answer.trim().toLowerCase())).size, 4, `Duplicate choices: ${id}`);
+            assert(Number.isInteger(q.correctAnswer) && q.correctAnswer >= 0 && q.correctAnswer < 4, `Invalid answer index: ${id}`);
+          }
+
+          function requireFile(relativePath) {
+            let filePath = relativePath.split(/[?#]/)[0].replace(/^\.\//, '');
+            if (!filePath || filePath.endsWith('/')) filePath += 'index.html';
+            let current = '.';
+            for (const part of filePath.split('/')) {
+              assert(part && part !== '..' && fs.readdirSync(current).includes(part), `Missing file or incorrect letter case: ${relativePath}`);
+              current = path.join(current, part);
+            }
+            assert(fs.statSync(current).isFile(), `Expected a file: ${relativePath}`);
+          }
+
+          const html = fs.readFileSync('index.html', 'utf8');
+          const css = fs.readFileSync('style.css', 'utf8');
+          const js = fs.readFileSync('script.js', 'utf8');
+          const assets = new Set();
+          for (const match of `${html}\n${css}\n${js}`.matchAll(/assets\/[a-zA-Z0-9_./-]+\.(?:svg|png|jpe?g|webp|gif|mp3|wav|ogg)\b/g)) assets.add(match[0]);
+          const spriteMap = js.match(/const SPRITES\s*=\s*\{([\s\S]*?)\};/);
+          assert(spriteMap, 'The sprite manifest must be present.');
+          for (const match of spriteMap[1].matchAll(/['"]([^'"]+\.(?:svg|png|jpe?g|webp|gif))['"]/g)) assets.add(`assets/${match[1]}`);
+          assert(assets.size > 0, 'No local artwork references found.');
+          for (const asset of assets) requireFile(asset);
+          for (const match of html.matchAll(/(?:src|href)=["']([^"']+)["']/g)) {
+            if (!/^(?:https?:|data:|#)/.test(match[1])) requireFile(match[1]);
+          }
+          const music = 'assets/audio/outer-space-loop.mp3';
+          requireFile(music);
+          assert(fs.statSync(music).size > 0, 'The downloaded music file is empty.');
+          requireFile('assets/audio/CREDITS.md');
+          console.log(`Validated ${questions.length} questions and ${assets.size} local asset references.`);
+          NODE
