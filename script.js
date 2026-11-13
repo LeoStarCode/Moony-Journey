@@ -19,21 +19,21 @@
   };
   const target = (id, label, x, y, hp, kind, extra = {}) => ({id,label,x,y,hp,kind,...extra});
   const TARGETS = [
-    [target('fuel','Fuel cells',24,61,2,'fuel'),target('navigation','Flight computer',66,39,1,'navigation'),target('engine','Engine ignition',53,75,2,'engine'),target('radio','Radio uplink',79,65,1,'radio'),target('launch','Launch clearance',35,34,1,'launch')],
-    [target('rock1','Scout rock',49,32,1,'asteroid'),target('rock2','Twin cluster',71,30,2,'cluster'),target('rock3','Iron giant',83,57,2,'large'),target('rock4','Shielded rock',57,67,1,'shielded'),target('rock5','Fast fragment',34,53,1,'asteroid'),target('rock6','Last boulder',72,77,1,'large')],
-    [target('oxygen','Oxygen regulator',21,44,2,'repair'),target('power','Power relay',43,71,1,'repair'),target('guidance','Navigation console',65,40,1,'repair'),target('stabilizer','Engine stabilizer',82,70,2,'repair')],
-    [target('scout1','Scout drone',47,35,1,'drone',{wave:1}),target('guard1','Patrol drone',70,48,2,'drone',{wave:1}),target('armor1','Armored drone',84,72,3,'armored',{wave:1}),target('scout2','Scout drone',48,73,1,'drone',{wave:2}),target('guard2','Patrol drone',69,34,2,'drone',{wave:2}),target('armor2','Armored drone',83,53,3,'armored',{wave:2})],
-    [target('shield','Shield emitters',61,36,3,'boss',{stage:1}),target('weapons','Weapon array',80,63,3,'boss',{stage:2}),target('core','Portal energy core',65,54,3,'boss',{stage:3})]
+    [target('fuel','Fuel cells',24,61,1,'fuel'),target('navigation','Flight computer',66,39,1,'navigation'),target('engine','Engine ignition',53,75,2,'engine',{important:true}),target('radio','Radio uplink',79,65,1,'radio'),target('launch','Launch clearance',35,34,1,'launch')],
+    [target('rock1','Scout rock',49,32,1,'asteroid'),target('rock2','Twin cluster',71,30,1,'cluster'),target('rock3','Iron giant',83,57,2,'large',{important:true}),target('rock4','Shielded rock',57,67,1,'shielded'),target('rock5','Fast fragment',34,53,1,'asteroid'),target('rock6','Last boulder',72,77,1,'large')],
+    [target('oxygen','Oxygen regulator',21,44,2,'repair',{important:true}),target('power','Power relay',43,71,1,'repair'),target('guidance','Navigation console',65,40,1,'repair'),target('stabilizer','Engine stabilizer',82,70,1,'repair')],
+    [target('scout1','Scout drone',47,35,1,'drone',{wave:1}),target('guard1','Patrol drone',70,48,1,'drone',{wave:1}),target('armor1','Armored drone',84,72,1,'armored',{wave:1}),target('scout2','Scout drone',48,73,1,'drone',{wave:2}),target('guard2','Patrol drone',69,34,1,'drone',{wave:2}),target('armor2','Armored drone',83,53,2,'armored',{wave:2,important:true})],
+    [target('shield','Shield emitters',61,36,1,'boss',{stage:1}),target('weapons','Weapon array',80,63,1,'boss',{stage:2}),target('core','Portal energy core',65,54,1,'boss',{stage:3})]
   ];
-  const LANDING = [target('thrusters','Landing thrusters',23,66,1,'thrusters'),target('stability','Altitude stabilizer',39,36,1,'stability'),target('alignment','Beacon alignment',76,36,2,'alignment'),target('gear','Landing gear',64,67,1,'gear'),target('descent','Final descent',81,76,2,'descent')];
+  const LANDING = [target('thrusters','Landing thrusters',23,66,1,'thrusters'),target('stability','Altitude stabilizer',39,36,1,'stability'),target('alignment','Beacon alignment',76,36,1,'alignment'),target('gear','Landing gear',64,67,1,'gear'),target('descent','Final descent',81,76,2,'descent',{important:true})];
   const INTRO = [
-    [['control','Mission Control','Welcome to Earth Space Center. Tonight, the Moon’s navigation beacon has gone silent. Without its light, visiting ships could lose their way.'],['control','Mission Control','Our pilot is Captain Nova: a curious young astronaut who never leaves a friend behind. Nova, your ship is the Starling.'],['nova','Captain Nova','My first flight to the Moon! Brave face: ready. Emergency snack: packed. Who’s my copilot?'],['pix','PIX','PIX, at your service. I’m the Starling’s AI: navigator, repair guide, and proud owner of exactly three excellent jokes.'],['control','Mission Control','Fly to the Moon, discover what happened, and bring the beacon back online. We’ll stay on the radio and guide you through each leg.'],['nova','Captain Nova','Then nobody has to find their way home in the dark. Let’s bring back the moonlight.'],['pix','PIX','First, our launch checks. Tap a glowing system. Some need one answer; fuel and engines need two, one after the other. Every answer counts, but mistakes cost one heart.'] ],
-    [['pix','PIX','That is definitely more rocks than the brochure promised. Something has pulled these asteroids into our route.'],['nova','Captain Nova','Then we make a safe path.'],['pix','PIX','Tap a rock to lock on. Your answers power our laser; blue energy shells need the shield. No speed test here. Take your time choosing a target.']],
-    [['nova','Captain Nova','What was that purple flash? The cabin lights just turned into a disco.'],['pix','PIX','An energy pulse! Oxygen, power, navigation, and stabilizers are offline. I would prefer oxygen to disco.'],['pix','PIX','Tap a damaged system. Complete its one or two safety checks in order, then connect the three highlighted contacts. Repairs change the cabin around you.']],
-    [['glitch','Commander Glitch','Attention, tiny Earth ship! Turn around. The Moon is temporarily closed for… extremely important alien business.'],['nova','Captain Nova','Is that business why our beacon stopped working?'],['glitch','Commander Glitch','My portal needs a LITTLE energy. Ignore the army of drones. They’re decorative!'],['pix','PIX','Hostile decorations incoming. Tap a drone to aim, then answer to fire. Armored drones take three hits. Clear both patrol waves.']],
-    [['pix','PIX','There! Glitch has plugged the stolen beacon into his portal ship. That explains the rocks and the pulse.'],['glitch','Commander Glitch','Behold my grand invention: the Intergalactic Shortcut! Next stop, the universe’s best sandwich shop!'],['nova','Captain Nova','You’re putting every ship nearby in danger. We’re shutting it down.'],['pix','PIX','First disrupt his shield, then disable his weapons. After that, target the portal core. Three precise hits for each stage.']]
+    [['control','Mission Control','Welcome to Earth Space Center. Tonight, the Moon’s navigation beacon has gone silent. Without its light, visiting ships could lose their way.'],['control','Mission Control','Our pilot is Captain Nova: a curious young astronaut who never leaves a friend behind. Nova, your ship is the Starling.'],['nova','Captain Nova','My first flight to the Moon! Brave face: ready. Emergency snack: packed. Who’s my copilot?'],['pix','PIX','PIX, at your service. I’m the Starling’s AI: navigator, repair guide, and proud owner of exactly three excellent jokes.'],['control','Mission Control','Fly to the Moon, discover what happened, and bring the beacon back online. We’ll stay on the radio and guide you through each leg.'],['nova','Captain Nova','Then nobody has to find their way home in the dark. Let’s bring back the moonlight.'],['pix','PIX','First, our launch checks. Tap a glowing system. Each needs one answer, except engine ignition: our key challenge needs two. Every answer counts, but mistakes cost one heart.'] ],
+    [['pix','PIX','That is definitely more rocks than the brochure promised. Something has pulled these asteroids into our route.'],['nova','Captain Nova','Then we make a safe path.'],['pix','PIX','Tap a rock to lock on. Each needs one answer, except the Iron giant: it takes two. Blue energy shells need the shield. Take your time choosing a target.']],
+    [['nova','Captain Nova','What was that purple flash? The cabin lights just turned into a disco.'],['pix','PIX','An energy pulse! Oxygen, power, navigation, and stabilizers are offline. I would prefer oxygen to disco.'],['pix','PIX','Tap a damaged system. The oxygen regulator needs two safety checks; the other repairs need one. Then connect the three highlighted contacts.']],
+    [['glitch','Commander Glitch','Attention, tiny Earth ship! Turn around. The Moon is temporarily closed for… extremely important alien business.'],['nova','Captain Nova','Is that business why our beacon stopped working?'],['glitch','Commander Glitch','My portal needs a LITTLE energy. Ignore the army of drones. They’re decorative!'],['pix','PIX','Hostile decorations incoming. Tap a drone to aim, then answer to fire. Only the final armored drone needs two answers. Clear both patrol waves.']],
+    [['pix','PIX','There! Glitch has plugged the stolen beacon into his portal ship. That explains the rocks and the pulse.'],['glitch','Commander Glitch','Behold my grand invention: the Intergalactic Shortcut! Next stop, the universe’s best sandwich shop!'],['nova','Captain Nova','You’re putting every ship nearby in danger. We’re shutting it down.'],['pix','PIX','First disrupt his shield, then disable his weapons. After that, target the portal core. One answer for each stage: three questions for the whole boss fight.']]
   ];
-  const LANDING_STORY = [['glitch','Commander Glitch','Fine! I’m going home. Apparently portal science requires reading the instructions.'],['pix','PIX','He’s retreating! The beacon is free, but we must land to switch it back on.'],['nova','Captain Nova','Let’s bring the moonlight home.'],['pix','PIX','Activate the five landing systems. Thrusters slow us, stabilizers steady us, and guidance lines up the beacon. Your hearts carry over from the boss fight.']];
+  const LANDING_STORY = [['glitch','Commander Glitch','Fine! I’m going home. Apparently portal science requires reading the instructions.'],['pix','PIX','He’s retreating! The beacon is free, but we must land to switch it back on.'],['nova','Captain Nova','Let’s bring the moonlight home.'],['pix','PIX','Activate the five landing systems. Each needs one answer, except final descent: our last key challenge needs two. Your hearts carry over from the boss fight.']];
   const ENDING = [['nova','Captain Nova','One small step for me. One very large repair bill for Commander Glitch.'],['pix','PIX','Beacon restored! Earth-to-Moon navigation is online. Look at that beautiful blue planet.'],['control','Mission Control','We see the light, Nova. Every ship has a safe route again. Welcome to the Moon!'],['glitch','Commander Glitch','For the record, I could have landed that well. Also… does Earth deliver sandwiches?']];
 
   // Quiet, playable flight legs connect the existing challenges. No quiz or reflex timer.
@@ -303,17 +303,20 @@
         const raw=localStorage.getItem(SAVE_KEY); if (!raw) return null;
         const d=JSON.parse(raw);
         if (d.version!==3 || !Number.isInteger(d.round) || d.round<0 || d.round>4 || !['main','landing'].includes(d.phase) || (d.phase==='landing'&&d.round!==4) || !Number.isInteger(d.hearts)||d.hearts<0||d.hearts>3 || !Array.isArray(d.used)||d.used.some(id=>typeof id!=='string')||new Set(d.used).size!==d.used.length || !['intro','play','complete','failed','victory','ending','travel'].includes(d.checkpoint) || typeof d.progress!=='object'||!d.progress||Array.isArray(d.progress) || !['correct','mistakes','elapsed'].every(k=>Number.isFinite(d[k])&&d[k]>=0) || !Number.isInteger(d.correct)||!Number.isInteger(d.mistakes) || d.correct+d.mistakes>d.used.length || (['victory','ending'].includes(d.checkpoint)&&(d.round!==4||d.phase!=='landing'))) throw new Error('Invalid save');
-        if (d.objectiveVersion!==undefined&&d.objectiveVersion!==2) throw new Error('Unknown objective version');
+        if (d.objectiveVersion!==undefined&&![2,3].includes(d.objectiveVersion)) throw new Error('Unknown objective version');
         const legacyObjectives=d.objectiveVersion===undefined;
+        const migratingObjectives=d.objectiveVersion!==3;
         const defs=d.phase==='landing'?LANDING:TARGETS[d.round];
         const validIds=new Set(defs.map(t=>t.id));
         if (Object.keys(d.progress).some(k=>!validIds.has(k))) throw new Error('Unknown objective');
         for (const t of defs) {
           const p=d.progress[t.id];
-          // Earlier saves used two checks for these now shorter tasks.
-          const shortened=legacyObjectives&&d.phase==='main'&&((d.round===0&&['navigation','radio','launch'].includes(t.id))||(d.round===2&&['power','guidance'].includes(t.id)));
-          if (shortened&&p?.hits===2) p.hits=1;
-          if (p && (!Number.isInteger(p.hits)||p.hits<0||p.hits>t.hp||typeof p.fixed!=='boolean'||(p.fixed&&p.hits<t.hp))) throw new Error('Invalid objective');
+          // Validate against the saved format before shortening completed checks.
+          const previousHp=d.phase==='landing'?({alignment:2}[t.id]||t.hp):([{fuel:2},{rock2:2},{stabilizer:2},{guard1:2,armor1:3,guard2:2,armor2:3},{shield:3,weapons:3,core:3}][d.round][t.id]||t.hp);
+          const legacyShortened=legacyObjectives&&d.phase==='main'&&((d.round===0&&['navigation','radio','launch'].includes(t.id))||(d.round===2&&['power','guidance'].includes(t.id)));
+          const savedHp=migratingObjectives?(legacyShortened?2:previousHp):t.hp;
+          if (p && (!Number.isInteger(p.hits)||p.hits<0||p.hits>savedHp||typeof p.fixed!=='boolean'||(p.fixed&&p.hits<savedHp))) throw new Error('Invalid objective');
+          if (p&&migratingObjectives) p.hits=Math.min(p.hits,t.hp);
         }
         if (d.hearts===0) d.checkpoint='failed';
         if (d.checkpoint==='failed' && d.hearts!==0) throw new Error('Invalid health');
@@ -323,7 +326,7 @@
         if(d.interludes!==undefined&&(!Array.isArray(d.interludes)||d.interludes.some(id=>typeof id!=='string')||new Set(d.interludes).size!==d.interludes.length))throw new Error('Invalid story progress');
         d.interludes=d.interludes||[];
         if (d.checkpoint==='play'&&allDone) d.checkpoint='complete';
-        d.objectiveVersion=2;
+        d.objectiveVersion=3;
         if(this.available)this.warning='';return d;
       } catch { this.warning='An old or damaged save was found. Start a new journey to safely recover.'; return null; }
     }
@@ -331,7 +334,7 @@
 
   class Renderer {
     constructor(game) {
-      this.game=game; this.canvas=$('scene'); this.ctx=this.canvas.getContext('2d'); this.images={}; this.time=0; this.particles=[];
+      this.game=game; this.canvas=$('scene'); this.ctx=this.canvas.getContext('2d'); this.images={}; this.time=0; this.particles=[];this.frameStep=0;this.crew=null;this.crewMission=null;this.crewPose=null;
       this.stars=Array.from({length:125},(_,i)=>({x:(i*173.37)%960,y:(i*97.31)%540,size:i%12===0?3:i%3===0?2:1,depth:.2+(i%6)*.17}));
       this.reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
       this.resize(); new ResizeObserver(()=>this.resize()).observe($('game-shell'));
@@ -347,9 +350,9 @@
     sprite(name,x,y,w,h,alpha=1) { const im=this.images[name];if (!im)return;this.ctx.globalAlpha=alpha;this.ctx.drawImage(im,Math.round(x),Math.round(y),w,h);this.ctx.globalAlpha=1; }
     rect(x,y,w,h,color) { this.ctx.fillStyle=color;this.ctx.fillRect(Math.round(x),Math.round(y),w,h); }
     text(message,x,y,size=12,color='#a9c2de',align='left') { const c=this.ctx;c.font=`600 ${size}px monospace`;c.fillStyle=color;c.textAlign=align;c.fillText(message,x,y);c.textAlign='left'; }
-    burst(x,y,color='#ffb65b',count=32) { if(this.reduced)count=8;for(let i=0;i<count;i++){const a=i*2.399,s=35+(i%7)*22;this.particles.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:.5+(i%4)*.2,max:1.1,color,size:2+i%4});} }
+    burst(x,y,color='#ffb65b',count=32) { if(this.reduced)return;for(let i=0;i<count;i++){const a=i*2.399,s=35+(i%7)*22;this.particles.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:.5+(i%4)*.2,max:1.1,color,size:2+i%4});} }
     draw(dt,animate=true) {
-      const c=this.ctx,g=this.game,d=g.data; if(animate)this.time+=this.reduced?dt*.2:dt;
+      const c=this.ctx,g=this.game,d=g.data;this.frameStep=animate&&!this.reduced?dt:0;if(this.frameStep)this.time+=dt;if(this.reduced)this.particles.length=0;
       const t=this.time;c.setTransform(this.canvas.width/960,0,0,this.canvas.height/540,0,0);c.imageSmoothingEnabled=false;
       const gradient=c.createLinearGradient(0,0,960,540);gradient.addColorStop(0,'#080f26');gradient.addColorStop(.55,'#171536');gradient.addColorStop(1,'#0a1730');c.fillStyle=gradient;c.fillRect(0,0,960,540);
       const menu=g.state===STATES.MENU||!d;const r=menu?-1:d.round;
@@ -367,6 +370,116 @@
       if(g.effect)this.drawEffect(g.effect);
       for(let i=this.particles.length-1;i>=0;i--){const p=this.particles[i];if(animate){p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=40*dt;p.life-=dt;}if(p.life<=0){this.particles.splice(i,1);continue;}c.globalAlpha=clamp(p.life/.5,0,1);this.rect(p.x,p.y,p.size,p.size,p.color);c.globalAlpha=1;}
       if(menu){c.fillStyle='rgba(5,10,25,.18)';c.fillRect(0,0,960,540);}
+    }
+    activeTask() {
+      const g=this.game;
+      return g.effect?.target||g.repair?.target||g.question?.target||null;
+    }
+    crewTime(scene) {return this.crew?.scene===scene&&this.crewMission===this.game.data?this.crew.elapsed:0;}
+    crewAt(scene,station,start={x:112,y:445,px:170,py:359}) {
+      if(!this.crew||this.crew.scene!==scene||this.crewMission!==this.game.data){this.crewMission=this.game.data;this.crew={scene,elapsed:0,nova:{x:start.x,y:start.y,face:1,walking:false,working:false},pix:{x:start.px,y:start.py}};}
+      const crew=this.crew,n=crew.nova,p=crew.pix;crew.elapsed+=this.frameStep;
+      const move=(actor,x,y,speed)=>{const dx=x-actor.x,dy=y-actor.y,d=Math.hypot(dx,dy),step=Math.min(d,speed*this.frameStep);if(d>.01&&step){actor.x+=dx/d*step;actor.y+=dy/d*step;}return d;};
+      if(this.reduced){n.x=station.x;n.y=station.y;p.x=station.px;p.y=station.py;n.face=station.contact.x<n.x?-1:1;n.walking=false;n.working=true;}
+      else if(this.frameStep){const distance=move(n,station.x,station.y,560);move(p,station.px,station.py,640);n.face=station.contact.x<n.x?-1:1;n.walking=distance>8;n.working=!n.walking;}
+      this.crewPose={scene,targetId:station.id,nova:{...n},pix:{...p},tool:station.tool};
+      return crew;
+    }
+    novaActor(n,station,scale=1,celebrate=false) {
+      const c=this.ctx,t=this.time,walk=n.walking?Math.sin(t*15):0,bob=this.reduced?0:n.walking?Math.abs(walk)*2:0,x=n.x,y=n.y-bob;
+      c.save();c.translate(Math.round(x),Math.round(y));c.scale(scale,scale);
+      c.save();c.scale(n.face,1);if(n.walking)c.rotate(walk*.025);this.sprite('nova',-22,-60,44,60);c.restore();
+      if(n.walking){this.rect(-13+walk*3,-4,11,5,'#699ab3');this.rect(3-walk*3,-4,11,5,'#699ab3');}
+      if(n.working||celebrate){
+        const f=n.face,wave=this.reduced?0:Math.sin(t*7),hand={x:f*(celebrate?23:32),y:celebrate?-57:-32+wave*2};
+        c.lineJoin='miter';c.lineWidth=11;c.strokeStyle='#142640';c.beginPath();c.moveTo(f*13,-26);c.lineTo(f*21,celebrate?-44:-34);c.lineTo(hand.x,hand.y);c.stroke();c.lineWidth=7;c.strokeStyle='#e4e8e6';c.stroke();
+        this.rect(hand.x-4,hand.y-3,8,7,'#f6a04f');
+        if(!celebrate&&station.tool==='wrench'){c.save();c.translate(hand.x,hand.y);c.rotate(f*(.15+wave*.17));this.rect(f<0?-18:0,-2,18,4,'#a9c6d2');this.rect(f<0?-20:15,-7,5,14,'#a9c6d2');this.rect(f<0?-21:18,-3,5,6,'#142640');c.restore();}
+        else if(!celebrate&&station.tool==='console')this.rect(hand.x+f*5-2,hand.y-2,5,4,'#9dffe1');
+      }
+      c.restore();
+    }
+    pixActor(p,contact,scanning=true,scale=1) {
+      const c=this.ctx,bob=this.reduced?0:Math.sin(this.time*2.4)*3,x=p.x,y=p.y+bob;
+      if(scanning){c.save();c.fillStyle='rgba(91,229,218,.1)';c.beginPath();c.moveTo(x,y+6);c.lineTo(contact.x-9,contact.y-10);c.lineTo(contact.x+9,contact.y+10);c.closePath();c.fill();c.strokeStyle='#72e4d1';c.globalAlpha=.65;c.lineWidth=1;c.setLineDash([3,5]);c.beginPath();c.moveTo(x,y+6);c.lineTo(contact.x,contact.y);c.stroke();c.setLineDash([]);c.restore();const sweep=this.reduced?0:Math.sin(this.time*3)*9;this.rect(contact.x-9,contact.y+sweep,18,2,'#8cf2db');}
+      this.sprite('pix',x-17*scale,y-17*scale,34*scale,34*scale);
+    }
+    workSparks(x,y,active) {
+      if(!active||this.reduced)return;const phase=(this.time*3)%1;
+      for(let i=0;i<3;i++){const a=i*2.1+phase*2,length=4+phase*8;this.rect(x+Math.cos(a)*length,y+Math.sin(a)*length,3,2,i%2?'#ffb95e':'#ffe7a0');}
+    }
+    boardCrew(crew,e) {
+      const c=this.ctx,progress=clamp(e.elapsed/e.duration,0,1),p=clamp(progress/.55,0,1),n=crew.nova,pix=crew.pix;
+      if(this.boardingEffect!==e){this.boardingEffect=e;this.boardingStart={x:n.x,y:n.y,px:pix.x,py:pix.y};}
+      const start=this.boardingStart,smooth=v=>v*v*(3-2*v);let x,y;
+      if(p<.33){const a=smooth(p/.33);x=start.x+(429-start.x)*a;y=start.y+(445-start.y)*a;}
+      else if(p<.72){const a=smooth((p-.33)/.39);x=429;y=445+(340-445)*a;}
+      else{const a=smooth((p-.72)/.28);x=429+(513-429)*a;y=340;}
+      const aboard=this.reduced||p>=1,lift=Math.pow(clamp((progress-.57)/.43,0,1),2)*650;
+      if(this.reduced){x=513;y=340;}
+      n.x=x;n.y=y-lift;n.face=1;n.walking=!aboard&&(p<.33||p>.72);n.working=false;
+      if(p<.72&&!this.reduced){const a=smooth(clamp(p/.72,0,1));pix.x=start.px+(454-start.px)*a;pix.y=start.py+(291-start.py)*a;}
+      else{const a=this.reduced?1:smooth(clamp((p-.72)/.28,0,1));pix.x=454+(520-454)*a;pix.y=291+(311-291)*a-lift;}
+      this.crewPose={scene:'launch',targetId:'boarding',nova:{...n},pix:{...pix},tool:null,boarding:!aboard,aboard};
+      if(progress<.57){
+        c.strokeStyle='#8caab7';c.lineWidth=2;c.beginPath();c.moveTo(409,341);c.lineTo(409,445);c.moveTo(452,341);c.lineTo(452,445);c.stroke();
+        const platform=aboard?340:p<.33?445:p<.72?y:340;this.rect(405,platform,49,6,'#adc0c7');this.rect(410,platform+6,39,5,'#506c80');
+        this.rect(501,280,40,63,'#354f68');this.rect(505,284,32,55,aboard?'#59788d':'#0c2037');this.rect(509,290,24,14,aboard?'#7de8d0':'#344e68');this.rect(532,315,3,10,'#cbd8d9');
+        if(!aboard){this.novaActor(n,{tool:'none'},1);this.pixActor(pix,{x:519,y:312},false,.9);}
+        this.text(aboard?'NOVA + PIX / CREW ABOARD':p<.33?'CREW / TO THE BOARDING LIFT':p<.72?'CREW / ASCENDING GANTRY':'CREW / ENTERING THE STARLING',64,465,9,'#a7d9d5');
+      }
+    }
+    launchCrew() {
+      const g=this.game,c=this.ctx;
+      const stations={
+        engine:{id:'engine',x:389,y:445,px:474,py:355,contact:{x:430,y:406},tool:'wrench'},
+        fuel:{id:'fuel',x:320,y:445,px:274,py:347,contact:{x:285,y:406},tool:'valve'},
+        navigation:{id:'navigation',x:571,y:445,px:661,py:264,contact:{x:610,y:406},tool:'console'},
+        radio:{id:'radio',x:696,y:445,px:785,py:346,contact:{x:737,y:406},tool:'console'},
+        launch:{id:'launch',x:316,y:445,px:334,py:260,contact:{x:357,y:406},tool:'console'}
+      };
+      const selected=this.activeTask(),route=['engine','fuel','navigation','radio'],idle=route[Math.floor(this.crewTime('launch')/5)%route.length],station=stations[g.effect?.type==='launch'?'launch':selected?.id||idle]||stations.engine;
+      const crew=this.crewAt('launch',station,{x:389,y:445,px:474,py:355}),working=crew.nova.working&&station.id==='engine',engine=TARGETS[0].find(t=>t.id==='engine'),charge=g.visualHits('engine')/engine.hp;
+      // A grounded service station keeps Nova safely beside the engine, away from its exhaust.
+      c.strokeStyle='#536f80';c.lineWidth=5;c.beginPath();c.moveTo(263,421);c.lineTo(280,437);c.lineTo(415,437);c.lineTo(472,416);c.lineTo(500,416);c.stroke();
+      this.rect(411,374,47,59,'#273e51');this.rect(416,379,37,28,'#101f35');this.text('ENGINE',416,369,8,'#9bc2d0');this.rect(420,385,29,4,'#355369');this.rect(420,385,29*charge,4,'#80edcc');
+      this.rect(420,395,29,4,charge>=1?'#9cffe1':charge>0?'#ffc17b':'#5c798c');this.rect(425,405,9,13,'#adc2c9');this.rect(424,403,14,5,working?'#f7bd68':'#d7e0da');
+      const valve=crew.nova.working&&station.id==='fuel'&&!this.reduced?Math.sin(this.time*3)*.5:0;c.save();c.translate(285,406);c.rotate(valve);c.strokeStyle='#e2ad6e';c.lineWidth=4;c.strokeRect(-10,-10,20,20);c.beginPath();c.moveTo(-10,0);c.lineTo(10,0);c.moveTo(0,-10);c.lineTo(0,10);c.stroke();c.restore();
+      this.panel(594,376,57,57,g.visualDone('navigation'));this.rect(605,389,34,15,'#355d76');this.rect(609,395,23,3,'#8be0df');
+      c.strokeStyle='#46677c';c.lineWidth=2;c.beginPath();c.moveTo(622,376);c.lineTo(622,250);c.stroke();
+      this.panel(342,378,46,55,g.visualDone('launch'));this.rect(352,395,25,13,g.visualDone('launch')?'#72e7c0':'#b38964');
+      if(station.id==='fuel'&&crew.nova.working&&!this.reduced){const flow=(this.time*35)%112;this.rect(287+flow,434,12,3,'#77ddcc');}
+      if(g.effect?.type==='launch'){this.boardCrew(crew,g.effect);return;}
+      this.workSparks(441,404,working&&g.effect?.target?.id==='engine');
+      this.pixActor(crew.pix,station.id==='engine'?{x:505,y:377}:station.id==='navigation'?{x:653,y:220}:station.contact,true);
+      this.novaActor(crew.nova,station,1);
+      if(g.effect?.type!=='launch')this.text(working?'NOVA + PIX / ENGINE PREPARATION':crew.nova.walking?'NOVA / MOVING TO SERVICE STATION':'NOVA + PIX / SYSTEM CHECK',65,465,9,'#8cbabf');
+    }
+    repairCrew() {
+      const g=this.game,c=this.ctx,specs={oxygen:{x:204,y:306},power:{x:406,y:390},guidance:{x:630,y:287},stabilizer:{x:788,y:388}},selected=this.activeTask(),pending=g.defs().filter(t=>!g.visualDone(t.id)),idle=pending[Math.floor(this.crewTime('engineering')/6)%Math.max(1,pending.length)],id=selected?.id||idle?.id||'guidance',panel=specs[id]||specs.guidance;
+      const station={id,x:clamp(panel.x-52,118,740),y:456,px:panel.x+49,py:panel.y-37,contact:{x:panel.x+3,y:panel.y+12},tool:'wrench'},crew=this.crewAt('engineering',station,{x:440,y:456,px:504,py:314}),cart=station.x+32;
+      c.strokeStyle='#e1b063';c.lineWidth=3;c.beginPath();c.moveTo(cart+12,414);c.lineTo(cart+22,435);c.lineTo(panel.x+20,435);c.lineTo(panel.x+20,panel.y+16);c.stroke();
+      this.rect(cart-3,405,37,35,'#53687e');this.rect(cart+2,410,27,18,'#122c3c');this.rect(cart+8,415,15,3,g.visualDone(id)?'#7ce7c3':'#edb170');this.rect(cart+3,441,5,12,'#738697');this.rect(cart+24,441,5,12,'#738697');this.rect(cart,451,12,5,'#0e1b2d');this.rect(cart+21,451,12,5,'#0e1b2d');
+      const taskStation={...station,contact:{x:cart+6,y:418}};
+      this.novaActor(crew.nova,taskStation,1);
+      this.pixActor(crew.pix,station.contact,true);
+      this.workSparks(panel.x+15,panel.y+12,crew.nova.working&&(g.state===STATES.REPAIR||g.effect?.type==='repair'));
+      this.text('PIX / DIAGNOSTIC LINK',station.px-48,station.py-26,8,'#7cdcca');
+    }
+    bridgeCrew(scene) {
+      const g=this.game,c=this.ctx,ob=this.activeTask()||g.visibleTargets().find(t=>!g.visualDone(t.id)),station={id:ob?.id||'course',x:102,y:504,px:264,py:455,contact:{x:177,y:466},tool:'console'},crew=this.crewAt(scene,station,{x:83,y:504,px:264,py:455});
+      this.rect(43,426,270,83,'#0c1b2de8');this.rect(43,426,270,3,'#527c8e');this.text('STARLING / FLIGHT DECK',55,439,8,'#80afbc');
+      this.rect(143,453,72,48,'#425d75');this.rect(148,458,62,30,'#102c43');this.rect(153,492,52,4,'#89a9ba');
+      c.strokeStyle='#548b9f';c.lineWidth=1;c.beginPath();c.moveTo(152,481);c.lineTo(205,481);c.moveTo(178,462);c.lineTo(178,485);c.stroke();
+      const tx=ob?156+(ob.x/100)*43:178,ty=ob?462+(ob.y/100)*19:472;this.rect(tx-3,ty-3,6,6,g.effect?'#ffd38f':'#81e8d2');
+      const celebrate=!!g.effect?.target&&g.effect.elapsed/g.effect.duration>.7&&g.visualDone(g.effect.target.id);
+      this.novaActor(crew.nova,station,.88,celebrate);this.pixActor(crew.pix,station.contact,true,.83);
+      this.text(ob?ob.label.toUpperCase():'COURSE CLEAR',325,488,8,'#88b6c8');
+    }
+    beaconCrew() {
+      const station={id:'beacon',x:744,y:422,px:851,py:333,contact:{x:784,y:387},tool:'console'},crew=this.crewAt('beacon',station,{x:625,y:422,px:688,py:344});
+      this.panel(776,372,36,47,true);this.rect(784,383,20,10,'#84f1d4');this.novaActor(crew.nova,station);this.pixActor(crew.pix,{x:799,y:312},true);
+      if(!this.reduced){const radius=22+(this.time*.25%1)*37;this.shield(798,308,radius,this.time,.25*(1-(radius-22)/37));}
     }
     menu(t) {
       this.sprite('moon',720,55,157,157,.85);this.sprite('earth',530,300,340,340);this.rect(540,470,300,70,'#0d1c38');
@@ -398,13 +511,14 @@
       this.rect(446,193,16,250,'#435c70');this.rect(452,187,6,260,'#8196a4');for(let y=220;y<420;y+=38){this.rect(410,y,48,6,'#5d7787');this.rect(416,y,6,24,'#455e72');}
       this.rect(440,238,90,8,'#638094');this.rect(440,340,90,8,'#638094');this.rect(467,429,107,18,'#8b9ca3');this.rect(458,447,125,12,'#2c4351');
       let lift=g.effect?.type==='launch'?Math.pow(clamp((g.effect.elapsed/g.effect.duration-.57)/.43,0,1),2)*650:0;
-      if(g.visualHits('engine')>0||lift){this.sprite('flame',505,397-lift,42,65+Math.sin(t*19)*9);}
+      if(g.visualDone('engine')||lift){this.sprite('flame',505,397-lift,42,65+Math.sin(t*19)*9);}
+      else if(g.visualHits('engine')>0)this.rect(508,403,36,7,'#db975e');
       this.sprite('rocket',489,203-lift,70,210);
-      this.rect(194,330,75,115,'#425a68');this.rect(187,320,89,12,'#7d97a5');this.rect(204,346,54,63,'#192d43');for(let i=0;i<4;i++)this.rect(210,398-i*12,42,7,g.visualHits('fuel')*2>i?'#6ae7be':'#2b4b59');this.text('FUEL',216,431,11,'#d1dde0');
+      this.rect(194,330,75,115,'#425a68');this.rect(187,320,89,12,'#7d97a5');this.rect(204,346,54,63,'#192d43');const fuelFill=g.visualHits('fuel')/TARGETS[0].find(t=>t.id==='fuel').hp;for(let i=0;i<4;i++)this.rect(210,398-i*12,42,7,fuelFill*4>i?'#6ae7be':'#2b4b59');this.text('FUEL',216,431,11,'#d1dde0');
       this.panel(600,180,112,68,g.visualDone('navigation'));this.text('NAV',614,199,10);this.rect(615,210,76,4,g.visualDone('navigation')?'#71efc3':'#53718e');
       this.rect(735,366,42,76,'#354c65');this.rect(741,372,30,47,'#0c2638');this.rect(754,315,6,55,'#799da7');this.rect(724,313,65,6,'#9bb3b7');this.rect(738,299,36,6,'#9bb3b7');if(g.visualHits('radio')){c.strokeStyle='#6ae7be';c.lineWidth=2;for(let i=0;i<3;i++){c.beginPath();c.arc(758,309,20+i*12,3.7,5.7);c.stroke();}}
       this.panel(284,165,105,68,g.visualDone('launch'));this.text('CONTROL',299,187,10);this.rect(301,202,69,12,g.visualDone('launch')?'#6ae7be':'#fdb15c');
-      this.sprite('nova',92,371,39,55);this.text('STARLING · LUNAR RESCUE',45,118,12,'#b0cfe7');
+      this.launchCrew();this.text('STARLING · LUNAR RESCUE',45,118,12,'#b0cfe7');
       if(lift>40){for(let i=0;i<12;i++)this.rect(437+i*13,433-(i%3)*10,32,18,'#b1c9cc');}
     }
     panel(x,y,w,h,working) {this.rect(x,y,w,h,'#50627c');this.rect(x+3,y+3,w-6,h-6,'#162a43');this.rect(x+8,y+8,4,4,working?'#69e5c2':'#f7a16e');this.rect(x+w-13,y+8,4,4,'#7195b2');}
@@ -412,6 +526,7 @@
       const g=this.game;this.sprite('earth',-88,348,230,230,.65);this.ship(112,270,1,t);this.text('DEFENSE LASER  /  READY',55,419,11,'#75cfdb');
       for(const ob of g.visualTargets()){if(g.visualDone(ob.id))continue;let x=ob.x*9.6,y=ob.y*5.4,size=ob.kind==='large'?84:ob.kind==='cluster'?58:61;let approach=this.reduced?0:58*Math.exp(-g.sceneAge/4),wobble=this.reduced?0:Math.sin(t*.45+ob.x)*5;x+=approach;size*=1-approach/250;this.sprite('asteroid',x-size/2+wobble,y-size/2,size,size);if(ob.kind==='cluster'){this.sprite('asteroid',x-38,y-43,30,30);this.sprite('asteroid',x+26,y+10,34,34);}if(ob.kind==='shielded')this.shield(x,y,48,t);}
       this.text('UNUSUAL GRAVITY SIGNATURE DETECTED',450,475,10,'#b092d2');
+      this.bridgeCrew('bridge-asteroids');
     }
     interior(t) {
       const g=this.game,c=this.ctx;this.rect(28,105,904,385,'#16223a');this.rect(45,123,870,345,'#25344c');
@@ -422,7 +537,7 @@
       const specs=[[150,258,106,83,'oxygen'],[351,344,110,89,'power'],[574,240,113,93,'guidance'],[734,344,110,87,'stabilizer']];
       for(const [x,y,w,h,id]of specs){const fixed=g.visualDone(id);this.panel(x,y,w,h,fixed);this.rect(x+15,y+23,w-30,27,fixed?'#123f45':'#442e47');for(let i=0;i<4;i++)this.rect(x+20+i*16,y+30,9,12,fixed?'#6ae2c3':'#ee947b');this.rect(x+18,y+h-16,w-36,4,fixed?'#6ae2c3':'#b46c79');if(!fixed){this.rect(x+w-6,y+12,15,4,'#d7a15c');if(Math.sin(t*3+x)>.5){this.rect(x+w+3,y+1,4,9,'#ffd98a');this.rect(x+w+9,y+7,7,3,'#ffb15a');}}}
       this.rect(89,254,30,124,'#536d84');this.rect(96,265,16,94,g.visualDone('oxygen')?'#63c9d1':'#71435c');
-      this.sprite('nova',440,329+Math.sin(t)*2,48,70);this.sprite('pix',504,300+Math.sin(t*1.3)*5,35,35);
+      this.repairCrew();
       this.text(g.visualDone('power')?'CABIN POWER: RESTORED':'EMERGENCY POWER · 4 SYSTEMS OFFLINE',57,102,12,g.visualDone('power')?'#71e7bd':'#f2aa8a');
       if(!g.visualDone('power')){c.fillStyle='rgba(160,53,63,.06)';c.fillRect(28,105,904,385);}this.text('STARLING / ENGINEERING DECK',57,505,10,'#7b94ac');
     }
@@ -430,6 +545,7 @@
       const g=this.game;this.sprite('moon',788,106,105,105,.48);this.ship(112,263,1,t);this.text(`PATROL WAVE 0${g.wave()} / 02`,60,420,12,'#7bdfde');
       for(const ob of g.visualTargets()){if(g.visualDone(ob.id))continue;const size=ob.kind==='armored'?115:91;this.sprite(ob.kind==='armored'?'armored':'drone',ob.x*9.6-size/2,ob.y*5.4-size*.32+Math.sin(t*1.7+ob.x)*5,size,size*.64);for(let i=0;i<ob.hp;i++)this.rect(ob.x*9.6-18+i*13,ob.y*5.4-41,9,4,i<ob.hp-g.visualHits(ob.id)?'#ce8eff':'#344663');}
       if(g.state===STATES.PLAY){const p=(t*.2)%1;this.rect(720-p*420,262+Math.sin(t)*6,19,3,'#ab65d8');this.shield(167,292,67,t,.22);}
+      this.bridgeCrew('bridge-drones');
     }
     boss(t) {
       const g=this.game,stage=g.visualBossStage();this.sprite('moon',710,228,270,270,.8);this.ship(98,273,1,t);
@@ -439,9 +555,10 @@
       if(stage===1)this.shield(647,265,191,t,.8);
       if(stage===3){this.rect(494,285,42,12,'#394358');this.rect(756,285,42,12,'#394358');this.rect(635,247,23,31,'#fff3b0');this.rect(641,241,11,43,'#77eedb');}
       this.ctx.restore();
-      const hits=TARGETS[4].reduce((n,o)=>n+g.visualHits(o.id),0);this.rect(498,116,294,7,'#352b50');this.rect(498,116,294*(1-hits/9),7,stage===1?'#7de5eb':'#d09af5');this.text('COMMANDER GLITCH',498,106,11,'#d3b9ed');
+      const hits=TARGETS[4].reduce((n,o)=>n+g.visualHits(o.id),0),total=TARGETS[4].reduce((n,o)=>n+o.hp,0);this.rect(498,116,294,7,'#352b50');this.rect(498,116,294*clamp(1-hits/total,0,1),7,stage===1?'#7de5eb':'#d09af5');this.text('COMMANDER GLITCH',498,106,11,'#d3b9ed');
       this.text(['','01 / DISRUPT SHIELD','02 / DISABLE WEAPONS','03 / CLOSE THE PORTAL'][stage]||'PORTAL OFFLINE',500,408,12,'#e7c7fd');
-      this.sprite('glitch',854,353,46,46,.8);
+      this.bridgeCrew('bridge-boss');
+      const panic=this.reduced?0:Math.sin(t*(stage===3?7:2))*3;this.panel(830,400,86,39,false);this.rect(841,410,64,10,stage===3?'#b16c95':'#705c99');this.sprite('glitch',849+panic,350,46,46,.9);this.rect(872+panic,389,8,17,'#b685cd');this.rect(877+panic,401,17,6,'#d2a2e5');
     }
     shield(x,y,r,t,alpha=.7) {const c=this.ctx;c.globalAlpha=alpha;c.strokeStyle='#6be4f4';c.lineWidth=3;c.setLineDash([12,7]);c.beginPath();for(let i=0;i<=12;i++){const a=i*Math.PI/6;const px=x+Math.cos(a)*r,py=y+Math.sin(a)*r*.75;i?c.lineTo(px,py):c.moveTo(px,py);}c.stroke();c.setLineDash([]);c.globalAlpha=1;}
     lunar(t,victory) {
@@ -449,27 +566,29 @@
       this.rect(0,422,960,118,'#647087');this.rect(0,422,960,6,'#a7afba');for(let i=0;i<33;i++){const x=(i*113)%960,y=438+(i*47)%100;this.rect(x,y,20+i%4*9,4,'#47566e');this.rect(x+4,y+4,12+i%4*6,3,'#7b8799');}for(let i=0;i<12;i++){let x=i*92;this.rect(x,414-(i%4)*6,48,10+(i%4)*6,'#8992a3');}
       this.rect(789,326,19,96,'#56667d');this.rect(783,321,31,10,'#9daabd');this.rect(788,301,21,21,victory?'#91ffe0':'#ba788c');this.rect(797,276,4,25,'#b6c8d2');
       if(victory){c.fillStyle='rgba(89,231,210,.12)';c.beginPath();c.moveTo(798,301);c.lineTo(735,0);c.lineTo(865,0);c.closePath();c.fill();this.shield(798,306,25,t,.4);}
-      let finished=LANDING.reduce((n,o)=>n+g.visualHits(o.id),0),alt=victory?0:95-finished*8;
+      let finished=LANDING.reduce((n,o)=>n+g.visualHits(o.id),0),total=LANDING.reduce((n,o)=>n+o.hp,0),alt=victory?0:95-finished/total*55;
       if(g.effect?.type==='landing')alt=clamp(40*(1-g.effect.elapsed/g.effect.duration),0,40);
       const sx=490+(victory?0:Math.sin(t)* (g.visualDone('stability')?1:9)),sy=286-alt;
       this.sprite('rocket',sx,sy,64,136);
       if(victory){this.rect(sx-9,sy+115,15,5,'#b7c5cf');this.rect(sx-11,sy+115,4,22,'#b7c5cf');this.rect(sx+57,sy+115,15,5,'#b7c5cf');this.rect(sx+69,sy+115,4,22,'#b7c5cf');}
       if(!victory){this.sprite('flame',sx+17,sy+126,29,45+(g.visualHits('thrusters')?12:0)+Math.sin(t*15)*7);if(g.visualHits('gear')){this.rect(sx-9,sy+115,15,5,'#b7c5cf');this.rect(sx-11,sy+115,4,22,'#b7c5cf');this.rect(sx+57,sy+115,15,5,'#b7c5cf');this.rect(sx+69,sy+115,4,22,'#b7c5cf');}this.text(`ALTITUDE ${Math.max(0,Math.round(alt*12))} M`,63,318,11,'#bcd0dc');this.text(g.visualDone('alignment')?'BEACON LOCK: ALIGNED':'BEACON LOCK: ACQUIRING',63,340,11,'#76d8d8');}
-      else {this.sprite('nova',625,362+Math.sin(t*3)*2,42,60);this.sprite('pix',688,344+Math.sin(t*2)*5,32,32);this.rect(591,355,4,68,'#d3dbe0');this.rect(595,355,38,25,'#d9975e');this.rect(601,361,15,4,'#fff3cd');this.rect(607,357,4,17,'#fff3cd');this.text('THE MOONLIGHT IS HOME',442,475,13,'#d8eee6');}
+      else {this.beaconCrew();this.rect(591,355,4,68,'#d3dbe0');this.rect(595,355,38,25,'#d9975e');this.rect(601,361,15,4,'#fff3cd');this.rect(607,357,4,17,'#fff3cd');this.text('THE MOONLIGHT IS HOME',442,475,13,'#d8eee6');}
       if(g.visualDone('alignment')&&!victory){c.strokeStyle='#61bfc5';c.setLineDash([4,7]);c.beginPath();c.moveTo(520,414);c.lineTo(798,312);c.stroke();c.setLineDash([]);}
+      if(!victory)this.bridgeCrew('bridge-landing');
     }
     drawEffect(e) {
       const p=clamp(e.elapsed/e.duration,0,1),c=this.ctx;
       if(['laser','shield','boss','alien'].includes(e.type)){
         const x=e.target?.x*9.6||640,y=e.target?.y*5.4||270;
-        if(p<.6){const z=clamp(p/.6,0,1),px=235+(x-235)*z,py=294+(y-294)*z;this.rect(px-28,py-3,37,6,e.type==='boss'?'#e8bcff':'#90ffed');this.rect(px-20,py-1,32,2,'#ffffff');}
-        if(p>=.5){c.globalAlpha=(1-p)*1.5;this.rect(x-26,y-26,52,52,'#ffe6a4');this.rect(x-39,y-8,78,16,'#fff4d1');c.globalAlpha=1;}
+        if(this.reduced){c.strokeStyle='#75b9ba';c.lineWidth=2;c.beginPath();c.moveTo(235,294);c.lineTo(x,y);c.stroke();this.rect(x-4,y-4,8,8,'#8ad9c6');}
+        else{if(p<.6){const z=clamp(p/.6,0,1),px=235+(x-235)*z,py=294+(y-294)*z;this.rect(px-28,py-3,37,6,e.type==='boss'?'#e8bcff':'#90ffed');this.rect(px-20,py-1,32,2,'#ffffff');}
+        if(p>=.5){c.globalAlpha=(1-p)*1.5;this.rect(x-26,y-26,52,52,'#ffe6a4');this.rect(x-39,y-8,78,16,'#fff4d1');c.globalAlpha=1;}}
         if(e.type==='shield')this.shield(174,295,80,this.time,1-p);
       }
       if(e.type==='launch'){this.text(p<.22?'3':p<.4?'2':p<.57?'1':'LIFTOFF',480,146,36,'#fff0c3','center');}
-      if(e.type==='repair'){this.shield(e.target.x*9.6,e.target.y*5.4,45+p*20,this.time,1-p);}
-      if(e.type==='activate'){this.text(e.target&&this.game.hits(e.target.id)<e.target.hp?'CHECK PASSED':'SYSTEM ONLINE',480,465,18,'#84f6cf','center');}
-      if(e.type==='defeat'){this.shield(647,264,200+p*100,this.time,1-p);this.text('PORTAL DISCONNECTED',480,438,22,'#c8fff0','center');}
+      if(e.type==='repair'){this.shield(e.target.x*9.6,e.target.y*5.4,this.reduced?45:45+p*20,this.time,this.reduced?.5:1-p);}
+      if(e.type==='activate'){this.text(e.target&&this.game.hits(e.target.id)<e.target.hp?'CHECK COMPLETE':'SYSTEM ONLINE',480,465,18,'#84f6cf','center');}
+      if(e.type==='defeat'){this.shield(647,264,this.reduced?200:200+p*100,this.time,this.reduced?.5:1-p);this.text('PORTAL DISCONNECTED',480,438,22,'#c8fff0','center');}
     }
   }
 
@@ -597,7 +716,7 @@
     newGame() {
       if(!this.loaded)return;
       this.display.enter();
-      this.data={version:3,objectiveVersion:2,round:0,phase:'main',hearts:3,progress:{},used:[],interludes:[],correct:0,mistakes:0,elapsed:0,checkpoint:'intro'};
+      this.data={version:3,objectiveVersion:3,round:0,phase:'main',hearts:3,progress:{},used:[],interludes:[],correct:0,mistakes:0,elapsed:0,checkpoint:'intro'};
       this.effect=null;this.question=null;this.repair=null;this.travel=null;this.saved=this.data;this.audio.unlock();this.persist();this.beginStory(INTRO[0],()=>this.startPlaying());this.updateHUD();
     }
     continueGame() {
@@ -651,7 +770,7 @@
       if(this.data)this.persist();this.saved=this.save.read()||this.data||this.saved;this.state=STATES.MENU;this.effect=null;this.question=null;
       $('hud').hidden=true;$('scene-targets').innerHTML='';if($('mission-controls'))$('mission-controls').innerHTML='';$('scene-caption').textContent='EARTH → THE MOON  /  ONE EXTRAORDINARY JOURNEY';
       const continueLabel=this.saved?.checkpoint==='victory'?'Mission debrief':'Continue game';
-      this.overlay(`<section class="menu-content"><p class="eyebrow"><span class="status-light"></span> A LITTLE CURIOSITY. A BIG ADVENTURE.</p><h1><span class="title-main">MOONY</span><span class="title-accent">JOURNEY<span class="title-star">✦</span></span></h1><p class="menu-subtitle">An Adventure Beyond Earth</p><p class="menu-copy">The Moon’s light has gone missing.<br>One brave captain. One clever little robot.<br>Test your Artemis knowledge on the way to the Moon.</p><div class="menu-actions">${this.saved?`<button class="primary" data-action="continue">${continueLabel} <span aria-hidden="true">→</span></button><button class="secondary" data-action="new">New game · fresh journey</button>`:'<button class="primary" data-action="new">New game <span aria-hidden="true">→</span></button>'}<button class="secondary" data-action="audio">Music & sound</button><button class="ghost" data-action="help">How to play <span aria-hidden="true">↗</span></button></div><div class="menu-meta"><span>5 CHAPTERS</span><i></i><span>~15 MINUTES</span><i></i><span>GRADE 8</span></div>${this.saved?'<p class="save-note">New game replaces your saved mission.</p>':''}${this.save.warning?`<p class="save-note" role="status">${esc(this.save.warning)}</p>`:''}</section><div class="menu-stamp" aria-hidden="true"><span>MISSION 001</span><strong>THE MISSING<br>MOONLIGHT</strong><span>DESTINATION: WONDER</span></div>`,'menu-overlay');
+      this.overlay(`<section class="menu-content"><p class="eyebrow"><span class="status-light"></span> A LITTLE CURIOSITY. A BIG ADVENTURE.</p><h1><span class="title-main">MOONY</span><span class="title-accent">JOURNEY<span class="title-star">✦</span></span></h1><p class="menu-subtitle">An Adventure Beyond Earth</p><p class="menu-copy">The Moon’s light has gone missing.<br>One brave captain. One clever little robot.<br>And a whole universe counting on you.</p><div class="menu-actions">${this.saved?`<button class="primary" data-action="continue">${continueLabel} <span aria-hidden="true">→</span></button><button class="secondary" data-action="new">New game · fresh journey</button>`:'<button class="primary" data-action="new">New game <span aria-hidden="true">→</span></button>'}<button class="secondary" data-action="audio">Music & sound</button><button class="ghost" data-action="help">How to play <span aria-hidden="true">↗</span></button></div><div class="menu-meta"><span>5 CHAPTERS</span><i></i><span>~15 MINUTES</span><i></i><span>PRACTICE QUIZ</span></div>${this.saved?'<p class="save-note">New game replaces your saved mission.</p>':''}${this.save.warning?`<p class="save-note" role="status">${esc(this.save.warning)}</p>`:''}</section><div class="menu-stamp" aria-hidden="true"><span>MISSION 001</span><strong>THE MISSING<br>MOONLIGHT</strong><span>DESTINATION: WONDER</span></div>`,'menu-overlay');
     }
     defs() {return this.data?.phase==='landing'?LANDING:TARGETS[this.data?.round||0];}
     progress(id) {return this.data.progress[id]||{hits:0,fixed:false};}
@@ -670,8 +789,8 @@
     visibleTargets() {const defs=this.defs();if(this.data.round===3)return defs.filter(t=>t.wave===this.wave());if(this.data.round===4&&this.data.phase==='main')return defs.filter(t=>t.stage===this.bossStage());return defs;}
     objective() {
       if(!this.data)return '';
-      if(this.data.phase==='landing')return 'Bring all five landing systems online. Return the moonlight.';
-      return ['Tap a launch system. Complete its one or two safety checks.','Tap an asteroid to aim your laser or shield.','Authorize each repair, then connect the highlighted contacts.',`Clear patrol wave ${this.wave()} of 2. Tap a drone to aim.`,['','Target the shield emitters. Break Glitch’s energy shell.','Target the weapon array. Make the portal ship safe.','Target the portal core. Charge your final burst.'][this.bossStage()]][this.data.round];
+      if(this.data.phase==='landing')return 'Bring all five landing systems online. Final descent needs two questions.';
+      return ['Bring each system online. Only engine ignition needs two questions.','Clear each asteroid. Only the Iron giant needs two questions.','Restore each system. Oxygen needs two questions; the others need one.',`Clear patrol wave ${this.wave()} of 2. The final armored drone needs two questions.`,['','Target the shield emitters. Break Glitch’s energy shell.','Target the weapon array. Make the portal ship safe.','Target the portal core. Charge your final burst.'][this.bossStage()]][this.data.round];
     }
     updateHUD() {
       if(!this.data)return;$('hud').hidden=this.state===STATES.MENU;
@@ -794,8 +913,9 @@
     }
     bossQuip() {
       const hits=TARGETS[4].reduce((n,t)=>n+this.hits(t.id),0);
-      if(hits===3)this.beginStory([['glitch','Commander Glitch','My shield! That was a limited-edition shield!'],['pix','PIX','His weapons are exposed. Let’s make those decorative too.']],()=>this.startPlaying());
-      if(hits===6)this.beginStory([['glitch','Commander Glitch','Who put the OFF switch on the OUTSIDE?'],['pix','PIX','The core is exposed. Three more charges will close the portal safely.']],()=>this.startPlaying());
+      const shieldChecks=TARGETS[4][0].hp,weaponChecks=shieldChecks+TARGETS[4][1].hp;
+      if(hits===shieldChecks)this.beginStory([['glitch','Commander Glitch','My shield! That was a limited-edition shield!'],['pix','PIX','His weapons are exposed. Let’s make those decorative too.']],()=>this.startPlaying());
+      if(hits===weaponChecks)this.beginStory([['glitch','Commander Glitch','Who put the OFF switch on the OUTSIDE?'],['pix','PIX','The core is exposed. One final charge will close the portal safely.']],()=>this.startPlaying());
     }
     roundComplete() {
       this.state=STATES.COMPLETE;this.data.checkpoint='complete';this.updateHUD();this.setInert(true);this.persist();
@@ -839,7 +959,7 @@
       if(!this.loaded||[STATES.HELP,STATES.ERROR].includes(this.state))return;
       if(this.state!==STATES.MENU&&this.state!==STATES.PAUSE){this.pause();if(this.state!==STATES.PAUSE)return;}
       this.helpReturn=this.state;this.state=STATES.HELP;
-      this.overlay(`<div class="modal-backdrop"><section class="panel wide help-panel"><p class="eyebrow">YOUR FIRST FLIGHT, EXPLAINED</p><h2>Little answers. Big adventures.</h2><div class="help-steps"><p><b>01 · Aim with a tap.</b> Choose glowing systems, rocks, or alien ships in the scene.</p><p><b>02 · Think, then act.</b> Pick one of four answers within 30 seconds. Every answer completes one check and powers an action while hearts remain.</p><p><b>03 · Three hearts per chapter.</b> A wrong answer or timeout counts as a completed check and costs one heart. Continue with fewer hearts. No hearts left? Retry the chapter. New chapter, fresh hearts.</p><p><b>04 · Make it to the Moon.</b> Launch, dodge rocks, reconnect repairs, clear two drone waves, stop Glitch, then land.</p></div><p class="small-note">Use a mouse or touch. Pause anytime with Ⅱ or Escape. Your mission saves automatically in this browser. Questions never repeat during a journey.</p><button class="primary" data-action="close-help">Ready, Captain →</button></section></div>`,'help-overlay');
+      this.overlay(`<div class="modal-backdrop"><section class="panel wide help-panel"><p class="eyebrow">YOUR FIRST FLIGHT, EXPLAINED</p><h2>Little answers. Big adventures.</h2><div class="help-steps"><p><b>01 · Aim with a tap.</b> Choose glowing systems, rocks, or alien ships in the scene.</p><p><b>02 · Think, then act.</b> Pick one of four answers within 30 seconds. Most tasks need one question; the key challenge in each stage needs two. The boss fight needs three in total.</p><p><b>03 · Three hearts per chapter.</b> A wrong answer or timeout counts as a completed check and costs one heart. Continue with fewer hearts. No hearts left? Retry the chapter. New chapter, fresh hearts.</p><p><b>04 · Make it to the Moon.</b> Launch, dodge rocks, reconnect repairs, clear two drone waves, stop Glitch, then land.</p></div><p class="small-note">Use a mouse or touch. Pause anytime with Ⅱ or Escape. Your mission saves automatically in this browser. Questions never repeat during a journey.</p><button class="primary" data-action="close-help">Ready, Captain →</button></section></div>`,'help-overlay');
     }
     closeHelp() {if(this.state!==STATES.HELP)return;this.state=this.helpReturn;if(this.state===STATES.PAUSE)this.renderPause();else this.showMenu();}
     exhausted() {

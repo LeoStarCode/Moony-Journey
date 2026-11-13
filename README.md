@@ -15,7 +15,7 @@ The same files also work on an ordinary static web host, including GitHub Pages.
 - Five chapters cover launch preparation, asteroid defense, ship repairs, alien drones, Commander Glitch's boss battle, and the Moon landing.
 - Five short flight legs connect the chapters with radio calls, safe waypoint piloting, and route scans.
 - Original local pixel art, animated spacecraft and effects, character dialogue, and a downloaded space-music loop bring the journey to life.
-- A replaceable bank of **120 Grade 8 questions about Artemis I, II, and III** powers **49 question checks across 29 challenge objects**. All three topics are mixed randomly throughout the game, with unseen questions available for retries.
+- The original **320 dummy math questions** are back temporarily. They power **34 question checks across 29 challenge objects**, mixed randomly throughout the game with unseen questions available for retries.
 - Mouse and touch controls, responsive layouts, fullscreen, pause, reduced-motion support, and automatic saves keep the mission accessible.
 
 A first journey is designed to take about **15 minutes**; reading and answer speed affect playtime.
@@ -23,12 +23,25 @@ A first journey is designed to take about **15 minutes**; reading and answer spe
 ## Controls and rules
 
 1. Choose **New game** or **Continue game**. The mission enters fullscreen where supported; the header control switches back. Embedded previews expand within the preview if fullscreen is unavailable.
-2. Tap a glowing system, asteroid, or enemy once to begin its task. Some tasks need one answer; others present several questions consecutively. The radio needs one check, while engine ignition needs two.
+2. Tap a glowing system, asteroid, or enemy once to begin its task. Ordinary challenges need one answer. Each stage's main challenge needs two consecutive answers, and the entire boss fight needs three.
 3. Choose one of four answers within **30 seconds**. Every answer completes one check. While hearts remain, it powers the next action. Continue through the same task's next question without selecting its object again.
 4. A wrong answer or timeout costs **exactly one heart** and still completes that check. Continue to the next question or finish the task with fewer hearts. Losing the last heart fails the round, even on its final check; **Retry round** restores three hearts and draws unseen questions. Correct answers and mistakes are recorded separately.
 5. Repair tasks finish with three highlighted connections. Flight legs use the radio, waypoint, and scan controls without a question timer or heart penalty.
 
 Each new round restores three hearts. The boss fight and landing share the final round's hearts. Use **Pause** or **Escape** to take a break; inactive browser tabs pause the mission. Dialogue's **Show message**, **Next**, and **Skip transmission** controls let you set the reading pace.
+
+| Stage | Main challenge | Questions |
+| --- | --- | ---: |
+| Launch | Engine ignition | 2 |
+| Asteroids | Iron giant | 2 |
+| Repairs | Oxygen regulator | 2 |
+| Drones | Final armored drone | 2 |
+| Boss | Shield, weapons, and core | 3 total, one per phase |
+| Landing | Final descent | 2 |
+
+All other challenge objects need one question. Existing saves are migrated to the shorter objectives while keeping their hearts, statistics, and question history.
+
+Nova and PIX move between launch systems, work the engine controls and fuel valve, and scan the equipment. Repairs use a service cart, tools, and a diagnostic cable. During encounters and landing, the crew work the flight-deck controls; Glitch works his own console, and the crew interact with the beacon on the Moon. Actions follow the selected system and its progress. Pausing or opening a question freezes the scene, and reduced-motion mode keeps the crew still and suppresses particle bursts.
 
 ## Music and audio
 
@@ -51,9 +64,7 @@ Progress, flight steps, displayed question IDs, statistics, and audio preference
 
 Questions never repeat during a journey, including after failed attempts, round retries, and saved-game resumes. Interrupted questions resume from a safe checkpoint and remain marked as seen. **New game** starts fresh. An exhausted bank shows recovery options instead of repeating questions.
 
-The question bank contains 40 questions per mission, covering Artemis I's uncrewed integrated flight test, Artemis II's crewed lunar flyby, and Artemis III's planned Earth-orbit lander demonstration. The supplied table is expanded with official NASA material. Mission facts were checked on November 10, 2026; Artemis III questions describe plans rather than completed events. Artemis I was the first integrated SLS/Orion flight test, not Orion's first-ever flight. Later Artemis missions and Moon-base plans are outside this quiz.
-
-Sources: [Artemis I](https://www.nasa.gov/mission/artemis-i/), [Artemis II](https://www.nasa.gov/mission/artemis-ii/), and [NASA's current Artemis III demonstration plan](https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/). The question bank's source list includes the supporting NASA pages used for additional details. The finite pool provides 71 extra draws beyond a complete 49-check journey; repeated retries or interruptions can exhaust it.
+The active bank is the original placeholder math set, restored from the initial project version. Replace it with subject questions when the content is ready. The finite pool provides 286 extra draws beyond a complete 34-check journey; repeated retries or interruptions can exhaust it.
 
 Replace the `questions` array in `questions.json` using this format:
 
@@ -61,11 +72,11 @@ Replace the `questions` array in `questions.json` using this format:
 {
   "questions": [
     {
-      "id": "artemis-example",
-      "question": "Which Artemis mission first carried astronauts?",
-      "answers": ["Artemis I", "Artemis II", "Artemis III", "None of these"],
-      "correctAnswer": 1,
-      "explanation": "Artemis II was the first crewed Artemis mission."
+      "id": 1,
+      "question": "What is 3 + 4?",
+      "answers": ["5", "6", "7", "8"],
+      "correctAnswer": 2,
+      "explanation": "Three plus four makes seven."
     }
   ]
 }
@@ -114,9 +125,9 @@ The game keeps exactly three primary code files and has no runtime dependencies.
 
 ## Validation
 
-The Artemis I–III update passed JavaScript syntax checks and the exact inline CI validator for 120 questions and 15 local asset references. Additional checks confirmed unique question text, 40 questions per mission, balanced correct-answer positions, and exclusion of later Artemis missions and Moon-base topics.
+The restored dummy bank matches the initial project's 320-question file byte for byte. JavaScript syntax and the inline CI validator check the game and its 15 local asset references.
 
-Chromium completed all 49 question steps with six deliberate mistakes, recording 43 correct answers and finishing with one heart. Checks passed for wrong-answer and timeout progression, saved-game continuation, zero-heart failure, fresh questions on retry, all 120 unseen draws followed by safe exhaustion, and the longest question layout at 1280 × 900 and 390 × 844. No browser exceptions occurred.
+Chromium completed all 34 question steps with six deliberate mistakes, recording 28 correct answers and finishing with one heart. Checks covered the five two-question challenges, the three-question boss and health bar, wrong-answer and timeout progression, fresh retry questions, old-save migration, and zero-heart failure. Engine, repair, and boss interactions were captured during normal playback. Pause, question, hidden-tab, and reduced-motion checks confirmed that actor movement stops. Desktop 1280 × 900 and phone 390 × 844 layouts passed without horizontal overflow or browser exceptions.
 
 Earlier Chromium checks covered audio controls, presets, preference migration, fullscreen, responsive layouts, and loading under a GitHub Pages-style project subfolder URL.
 
