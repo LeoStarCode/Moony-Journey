@@ -2,6 +2,8 @@ name: Publish GitHub Pages
 
 # Publishing is an explicit action; pushes only run validation.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
