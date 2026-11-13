@@ -292,7 +292,23 @@
       }
       this.items=data.questions;
     }
-    pick(used) { const seen=new Set(used), available=this.items.filter(q=>!seen.has(String(q.id))); return available.length ? available[Math.floor(Math.random()*available.length)] : null; }
+    pick(used) {
+      const cycleLength = this.items.length;
+    
+      const cycleStart =
+        Math.floor(used.length / cycleLength) * cycleLength;
+    
+      const currentCycle = used.slice(cycleStart);
+      const seen = new Set(currentCycle);
+    
+      const available = this.items.filter(
+        q => !seen.has(String(q.id))
+      );
+    
+      return available.length
+        ? available[Math.floor(Math.random() * available.length)]
+        : null;
+    }
   }
 
   class SaveManager {
@@ -302,7 +318,7 @@
       try {
         const raw=localStorage.getItem(SAVE_KEY); if (!raw) return null;
         const d=JSON.parse(raw);
-        if (d.version!==3 || !Number.isInteger(d.round) || d.round<0 || d.round>4 || !['main','landing'].includes(d.phase) || (d.phase==='landing'&&d.round!==4) || !Number.isInteger(d.hearts)||d.hearts<0||d.hearts>3 || !Array.isArray(d.used)||d.used.some(id=>typeof id!=='string')||new Set(d.used).size!==d.used.length || !['intro','play','complete','failed','victory','ending','travel'].includes(d.checkpoint) || typeof d.progress!=='object'||!d.progress||Array.isArray(d.progress) || !['correct','mistakes','elapsed'].every(k=>Number.isFinite(d[k])&&d[k]>=0) || !Number.isInteger(d.correct)||!Number.isInteger(d.mistakes) || d.correct+d.mistakes>d.used.length || (['victory','ending'].includes(d.checkpoint)&&(d.round!==4||d.phase!=='landing'))) throw new Error('Invalid save');
+        if (d.version!==3 || !Number.isInteger(d.round) || d.round<0 || d.round>4 || !['main','landing'].includes(d.phase) || (d.phase==='landing'&&d.round!==4) || !Number.isInteger(d.hearts)||d.hearts<0||d.hearts>3 || !Array.isArray(d.used)||d.used.some(id=>typeof id!=='string') || !['intro','play','complete','failed','victory','ending','travel'].includes(d.checkpoint) || typeof d.progress!=='object'||!d.progress||Array.isArray(d.progress) || !['correct','mistakes','elapsed'].every(k=>Number.isFinite(d[k])&&d[k]>=0) || !Number.isInteger(d.correct)||!Number.isInteger(d.mistakes) || d.correct+d.mistakes>d.used.length || (['victory','ending'].includes(d.checkpoint)&&(d.round!==4||d.phase!=='landing'))) throw new Error('Invalid save');
         if (d.objectiveVersion!==undefined&&![2,3].includes(d.objectiveVersion)) throw new Error('Unknown objective version');
         const legacyObjectives=d.objectiveVersion===undefined;
         const migratingObjectives=d.objectiveVersion!==3;
