@@ -1,6 +1,6 @@
 name: Publish GitHub Pages
 
-# Publishing is an explicit action; pushes only run validation.
+# Publish after validation on pushes to main or a manual workflow run.
 on:
   push:
     branches: [main]
