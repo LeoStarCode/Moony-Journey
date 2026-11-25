@@ -24,6 +24,8 @@ jobs:
           node-version: '24'
       - name: Check JavaScript syntax
         run: node --check script.js
+      - name: Check embedded questions
+        run: node tools/sync-questions.cjs --check
       - name: Validate question bank and local assets
         shell: bash
         run: |

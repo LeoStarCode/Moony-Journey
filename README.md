@@ -6,15 +6,9 @@ The Moon's navigation beacon has gone dark. Join Captain Nova and the ship AI, P
 
 ## Run the game
 
-Serve the project folder with any static web server. For example, if Python is installed, run this command from the project folder:
+Double-click **index.html**, or open it with your browser. Keep `script.js`, `style.css`, and the `assets` folder beside it. The questions are included in the HTML, and the music loads directly from the local audio file.
 
-```sh
-python -m http.server 8000
-```
-
-Open [localhost:8000](http://localhost:8000) in your browser. Opening `index.html` directly through a `file://` URL can prevent the question bank and music from loading.
-
-The game also runs on static hosts such as GitHub Pages. It has no build step, package installation, backend, or runtime libraries.
+No server, editor extension, installation, or build step is needed to play. The same folder also works on static hosts such as GitHub Pages.
 
 ## The adventure
 
@@ -62,11 +56,11 @@ The local **Outer Space Loop** MP3 plays without an external music service. Musi
 
 ## Saves and questions
 
-Progress, flight steps, question history, statistics, and audio preferences use browser `localStorage`. Continue in the same browser at the same site address. Clearing site data or changing the address or port can make an existing save unavailable. A new game replaces the saved mission.
+Progress, flight steps, question history, statistics, and audio preferences use browser `localStorage`. Continue in the same browser at the same file location or site address. Moving the folder, clearing browser data, or switching between the local file and a hosted copy can make an existing save unavailable. A new game replaces the saved mission.
 
 Questions are chosen randomly without repeats within each pass through the bank. **After all 34 have been drawn, another randomized pass begins**, so retries and interrupted questions can eventually lead to repeats. Question history survives retries and saved-game resumes. An interrupted question is counted as drawn; continuing resumes from a safe checkpoint rather than restoring that question's timer.
 
-To change the content, replace the `questions` array in `questions.json`:
+To change the content, edit the `questions` array in `questions.json`:
 
 ```json
 {
@@ -84,9 +78,17 @@ To change the content, replace the `questions` array in `questions.json`:
 
 Each question needs a unique nonempty string or finite numeric ID, nonempty text, four distinct nonempty answer strings, and a zero-based `correctAnswer` index from 0 to 3. `explanation` is optional. The repository validator requires **at least 34 questions**. Keep IDs stable for saved games, verify the answers, and start a new journey after changing the bank to begin a fresh question cycle.
 
+After editing questions, run this maintainer command with Node.js to update the copy embedded in `index.html`:
+
+```sh
+node tools/sync-questions.cjs
+```
+
+Commit both files together. CI checks that the copies match. Players do not need Node.js or `questions.json` to launch the game.
+
 ## Validation and publishing
 
-The **Validate game** GitHub Actions workflow runs on pushes and pull requests and can be run manually. It checks JavaScript syntax, question schema and minimum count, the three primary code files, local asset paths with exact letter case, and the music file. Node.js 24 is used by CI.
+The **Validate game** GitHub Actions workflow runs on pushes and pull requests and can be run manually. It checks JavaScript syntax, question schema and minimum count, the embedded questions, the three primary code files, local asset paths with exact letter case, and the music file. Node.js 24 is used by CI.
 
 The **Publish GitHub Pages** workflow validates and deploys **automatically on pushes to `main`**. It can also be started manually:
 
@@ -98,6 +100,14 @@ Repository environment rules may require approval before deployment.
 
 Browser checks cover a complete 34-check journey, deliberate wrong answers, timeouts, retries, save migration, boss health, pause behavior, and reduced motion. Desktop 1280 × 900 and phone 390 × 844 layouts were checked in Chromium without horizontal overflow or browser exceptions. Safari, Firefox, and physical touch devices have not been tested.
 
+To run the direct-file regression check with Node.js 24 and Chrome/Chromium installed:
+
+```sh
+node tests/file-launch.cjs
+```
+
+Set `CHROME_BIN` to the browser executable if it is not found automatically. The check opens the real `index.html` using `file://`, verifies local music and question loading, checks mute/pause and save/reload, and completes an isolated copy of the journey without network requests or file-access exceptions.
+
 ## Project structure
 
 ```text
@@ -107,6 +117,10 @@ Moony-Journey/
 ├── script.js               Game, rendering, audio, and saves
 ├── questions.json          Artemis question bank
 ├── README.md
+├── tools/
+│   └── sync-questions.cjs   Updates the questions embedded in HTML
+├── tests/
+│   └── file-launch.cjs      Direct-file browser regression check
 ├── .nojekyll
 ├── .github/workflows/
 │   ├── validate.yml

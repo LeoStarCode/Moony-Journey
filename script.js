@@ -62,10 +62,17 @@
 
   class AudioManager {
     constructor() {
-      this.enabled=true;this.context=null;this.master=null;this.effectsGain=null;this.speechGain=null;this.musicPreviewGain=null;this.effects=new Set();this.speech=new Set();this.musicPreviewNodes=new Set();this.ambient=null;this.ambienceScene=null;this.lastSpeechAt=-Infinity;this.lastError='';
+      this.enabled=true;this.context=null;this.master=null;this.effectsGain=null;this.speechGain=null;this.effects=new Set();this.speech=new Set();this.musicPreviewNodes=new Set();this.ambient=null;this.ambienceScene=null;this.lastSpeechAt=-Infinity;this.lastError='';
       this.effectsEnabled=true;this.voiceEnabled=true;this.masterVolume=.8;this.musicVolume=.4;this.effectsVolume=.65;this.voiceVolume=.75;
-      this.musicEnabled=true;this.musicGain=null;this.musicNodes=new Set();this.musicRunning=false;this.musicActive=false;this.musicDucked=false;
-      this.musicBuffer=null;this.musicLoad=null;this.musicError='';this.musicDuration=0;this.musicOffset=0;this.musicStartedAt=0;this.musicSource=null;this.musicPreviewToken=0;
+      this.musicEnabled=true;this.musicRunning=false;this.musicActive=false;this.musicDucked=false;
+      this.musicError='';this.musicDuration=0;this.musicPreviewToken=0;this.musicPlayToken=0;this.musicPending=false;this.musicBlocked=false;
+      // Media elements can play sibling files without fetch or a CORS-sensitive audio graph.
+      this.musicElement=new Audio(MUSIC_FILE);this.musicSample=new Audio(MUSIC_FILE);
+      for(const element of [this.musicElement,this.musicSample]){
+        element.preload='none';element.loop=true;
+        element.addEventListener('loadedmetadata',()=>{this.musicDuration=element.duration;});
+        element.addEventListener('error',()=>{this.musicError='The background music file could not load. Check assets/audio/outer-space-loop.mp3.';});
+      }
       try { this.enabled=localStorage.getItem(SOUND_KEY)!=='off'; } catch {}
       try { this.musicEnabled=localStorage.getItem(MUSIC_KEY)!=='off'; } catch {}
       try {
@@ -82,15 +89,13 @@
         if(!this.context){
           const AudioContext=window.AudioContext||window.webkitAudioContext;if(!AudioContext){this.lastError='Audio is not supported in this browser.';return false;}
           this.context=new AudioContext();this.master=this.context.createGain();this.master.gain.value=0;this.master.connect(this.context.destination);
-          this.musicGain=this.context.createGain();this.musicGain.gain.value=0;this.musicGain.connect(this.master);
           this.effectsGain=this.context.createGain();this.effectsGain.gain.value=0;this.effectsGain.connect(this.master);
           this.speechGain=this.context.createGain();this.speechGain.gain.value=0;this.speechGain.connect(this.master);
-          this.musicPreviewGain=this.context.createGain();this.musicPreviewGain.gain.value=0;this.musicPreviewGain.connect(this.master);
           this.applyGains();
         }
         if(this.context.state==='suspended')this.context.resume().then(()=>{this.lastError='';}).catch(error=>{this.lastError=error.message||'Audio could not start. Try a sound preview.';});
         if(this.context.state==='running')this.lastError='';
-        this.loadMusic();
+        this.musicBlocked=false;this.updateMusic(this.musicActive,this.musicDucked);
         return this.context.state!=='closed';
       } catch(error) {this.lastError=error.message||'Audio could not start.';return false;}
     }
@@ -131,7 +136,7 @@
       this.stopNodes(this.speech);this.lastSpeechAt=-Infinity;
     }
     stopNodes(nodes) {
-      if(nodes===this.musicPreviewNodes)this.musicPreviewToken++;
+      if(nodes===this.musicPreviewNodes){this.musicPreviewToken++;clearTimeout(this.musicPreviewTimer);this.musicSample.pause();}
       for(const node of nodes){try{node.stop();}catch{}}
       nodes.clear();
     }
@@ -147,43 +152,30 @@
       for(const frequency of frequencies){const node=ctx.createOscillator();node.type='sine';node.frequency.value=frequency;node.connect(gain);node.start();nodes.push(node);}
       this.ambient={scene:desired,nodes,gain};
     }
-    loadMusic(retry=false) {
-      if(!this.context)return Promise.resolve(null);
-      if(this.musicBuffer)return Promise.resolve(this.musicBuffer);
-      if(this.musicLoad&&!(retry&&this.musicError))return this.musicLoad;
-      const ctx=this.context;this.musicError='';
-      this.musicLoad=(async()=>{
-        const response=await fetch(MUSIC_FILE,{cache:'force-cache'});
-        if(!response.ok)throw new Error(`Background music could not load (HTTP ${response.status}).`);
-        const buffer=await ctx.decodeAudioData(await response.arrayBuffer());
-        if(!Number.isFinite(buffer.duration)||buffer.duration<=0)throw new Error('The background music file could not be decoded.');
-        if(this.context!==ctx||ctx.state==='closed')return null;
-        this.musicBuffer=buffer;this.musicDuration=buffer.duration;this.musicOffset%=buffer.duration;this.musicError='';
-        this.updateMusic(this.musicActive,this.musicDucked);
-        return buffer;
-      })().catch(error=>{if(this.context===ctx)this.musicError=error.message||'The background music file is unavailable.';return null;});
-      return this.musicLoad;
+    applyMusicVolume() {
+      const master=this.enabled ? .85*this.volumeGain(this.masterVolume) : 0;
+      this.musicElement.volume=this.musicEnabled ? master*this.musicLevel() : 0;
+      this.musicSample.volume=this.musicEnabled ? master*.55*this.volumeGain(this.musicVolume) : 0;
     }
     updateMusic(active,ducked=false) {
-      const wasDucked=this.musicDucked;this.musicActive=!!active;this.musicDucked=!!ducked;
-      if(!active||!this.enabled||this.masterVolume===0||!this.musicEnabled||this.musicVolume===0||!this.context||this.context.state!=='running') {this.stopMusic(true);return;}
-      if(!this.musicBuffer){this.loadMusic();return;}
-      const ctx=this.context,now=ctx.currentTime,level=this.musicLevel(ducked);
-      if(!this.musicRunning){
-        const source=ctx.createBufferSource();source.buffer=this.musicBuffer;source.loop=true;source.connect(this.musicGain);
-        this.musicSource=source;this.musicNodes.add(source);this.musicStartedAt=now;this.musicRunning=true;
-        source.onended=()=>{this.musicNodes.delete(source);source.disconnect();if(this.musicSource===source){this.musicOffset=(this.musicOffset+ctx.currentTime-this.musicStartedAt)%this.musicDuration;this.musicSource=null;this.musicRunning=false;}};
-        this.musicGain.gain.cancelScheduledValues(now);this.musicGain.gain.setValueAtTime(0,now);this.setGain(this.musicGain,level);
-        source.start(now,this.musicOffset);
-      }else if(wasDucked!==!!ducked)this.setGain(this.musicGain,level);
+      this.musicActive=!!active;this.musicDucked=!!ducked;this.applyMusicVolume();
+      if(!active||!this.enabled||this.masterVolume===0||!this.musicEnabled||this.musicVolume===0){this.stopMusic(true);return;}
+      if(this.musicRunning||this.musicPending||this.musicBlocked)return;
+      const token=++this.musicPlayToken;this.musicPending=true;
+      if(this.musicElement.error)this.musicElement.load();
+      this.musicElement.play().then(()=>{
+        if(token!==this.musicPlayToken)return;
+        this.musicPending=false;this.musicRunning=true;this.musicError='';
+      }).catch(error=>{
+        if(token!==this.musicPlayToken)return;
+        this.musicPending=false;this.musicRunning=false;this.musicBlocked=true;
+        if(error.name!=='NotAllowedError'&&error.name!=='AbortError')this.musicError=error.message||'The background music file is unavailable.';
+      });
     }
     stopMusic(keepActive=false) {
       if(!keepActive)this.musicActive=false;
-      if(!this.musicRunning&&!this.musicNodes.size)return;
-      if(this.musicRunning&&this.musicDuration)this.musicOffset=(this.musicOffset+Math.max(0,this.context.currentTime-this.musicStartedAt))%this.musicDuration;
-      this.musicRunning=false;this.musicSource=null;this.musicStartedAt=0;
-      if(this.musicGain){this.musicGain.gain.cancelScheduledValues(this.context.currentTime);this.musicGain.gain.setValueAtTime(0,this.context.currentTime);}
-      this.stopNodes(this.musicNodes);
+      if(!this.musicRunning&&!this.musicPending)return;
+      this.musicPlayToken++;this.musicPending=false;this.musicRunning=false;this.musicElement.pause();
     }
     toggleMusic() {
       this.musicEnabled=!this.musicEnabled;
@@ -219,12 +211,11 @@
       gain.linearRampToValueAtTime(target,now+.035);
     }
     applyGains() {
+      this.applyMusicVolume();
       if(!this.context)return;
       this.setGain(this.master,this.enabled ? .85*this.volumeGain(this.masterVolume) : 0);
       this.setGain(this.effectsGain,this.effectsEnabled ? this.volumeGain(this.effectsVolume) : 0);
       this.setGain(this.speechGain,this.voiceEnabled ? this.volumeGain(this.voiceVolume) : 0);
-      this.setGain(this.musicPreviewGain,this.musicEnabled ? .55*this.volumeGain(this.musicVolume) : 0);
-      if(this.musicRunning)this.setGain(this.musicGain,this.musicEnabled ? this.musicLevel() : 0);
     }
     setVolume(channel,value) {
       if(!['master','music','effects','voice'].includes(channel)||!Number.isFinite(value))return false;
@@ -254,13 +245,12 @@
       if(channel==='music'){
         if(!this.musicEnabled)return false;
         this.stopNodes(this.musicPreviewNodes);const token=this.musicPreviewToken;
-        const begin=buffer=>{
-          if(!buffer||token!==this.musicPreviewToken||!this.enabled||this.masterVolume===0||!this.musicEnabled||this.musicVolume===0||!this.context||this.context.state==='closed')return;
-          const ctx=this.context,source=ctx.createBufferSource();source.buffer=buffer;source.loop=true;source.connect(this.musicPreviewGain);
-          this.musicPreviewNodes.add(source);source.onended=()=>{this.musicPreviewNodes.delete(source);source.disconnect();};
-          source.start(ctx.currentTime,this.musicOffset%buffer.duration);source.stop(ctx.currentTime+4);
-        };
-        if(this.musicBuffer)begin(this.musicBuffer);else this.loadMusic(true).then(begin);
+        if(this.musicSample.error)this.musicSample.load();
+        this.musicSample.currentTime=this.musicElement.currentTime;this.applyMusicVolume();
+        this.musicSample.play().then(()=>{
+          if(token!==this.musicPreviewToken)return;
+          this.musicError='';this.musicPreviewTimer=setTimeout(()=>this.stopNodes(this.musicPreviewNodes),4000);
+        }).catch(error=>{if(token===this.musicPreviewToken&&error.name!=='AbortError')this.musicError=error.message||'Music could not start. Try Test again.';});
       }else if(channel==='effects'){
         if(!this.effectsEnabled)return false;this.play('repair');
       }else{
@@ -275,15 +265,15 @@
       try {localStorage.setItem(SOUND_KEY,'on');localStorage.setItem(MUSIC_KEY,'on');} catch {}
       this.persistSettings();this.unlock();this.applyGains();this.setAmbience(this.ambienceScene);this.updateMusic(this.musicActive,this.musicDucked);
     }
-    status() {return {supported:!!(window.AudioContext||window.webkitAudioContext),unlocked:!!this.context&&this.context.state!=='closed',running:this.context?.state==='running',muted:!this.enabled||this.masterVolume===0,error:this.lastError,musicReady:!!this.musicBuffer,musicLoading:!!this.musicLoad&&!this.musicBuffer&&!this.musicError,musicError:this.musicError,musicDuration:this.musicDuration};}
+    status() {return {supported:!!(window.AudioContext||window.webkitAudioContext),unlocked:!!this.context&&this.context.state!=='closed',running:this.context?.state==='running',muted:!this.enabled||this.masterVolume===0,error:this.lastError,musicReady:this.musicElement.readyState>=2,musicLoading:this.musicElement.networkState===2&&!this.musicError,musicError:this.musicError,musicDuration:this.musicDuration};}
   }
 
   class QuestionBank {
     constructor() { this.items=[]; }
     async load() {
-      const response = await fetch('questions.json',{cache:'no-cache'});
-      if (!response.ok) throw new Error(`questions.json returned HTTP ${response.status}.`);
-      const data = await response.json(), ids = new Set();
+      const embedded=$('question-bank');
+      if(!embedded)throw new Error('The question bank is missing from index.html.');
+      const data = JSON.parse(embedded.textContent), ids = new Set();
       if (!data || !Array.isArray(data.questions) || !data.questions.length) throw new Error('questions.json must contain a non-empty questions array.');
       for (const q of data.questions) {
         const id = String(q?.id);
@@ -650,7 +640,7 @@
     }
     async init() {
       try { await Promise.all([this.bank.load(),this.renderer.load()]);this.loaded=true;this.saved=this.save.read();this.showMenu(); }
-      catch(error){this.state=STATES.ERROR;this.overlay(`<div class="modal-backdrop"><section class="panel"><p class="eyebrow">MISSION FILES UNAVAILABLE</p><h2>Let’s get you ready for launch.</h2><p>${esc(error.message)}</p><p>Open the game through a local web server or a static website host. Check that <strong>questions.json</strong> and the <strong>assets</strong> folder are beside <strong>index.html</strong>, then reload the page.</p><button class="primary" data-action="reload">Try again</button></section></div>`);}
+      catch(error){this.state=STATES.ERROR;this.overlay(`<div class="modal-backdrop"><section class="panel"><p class="eyebrow">MISSION FILES UNAVAILABLE</p><h2>Let’s get you ready for launch.</h2><p>${esc(error.message)}</p><p>Keep <strong>script.js</strong>, <strong>style.css</strong>, and the <strong>assets</strong> folder beside <strong>index.html</strong>, then reopen the file. If you changed the questions, update the embedded question bank before trying again.</p><button class="primary" data-action="reload">Try again</button></section></div>`);}
     }
     bind() {
       document.addEventListener('click',event=>{
